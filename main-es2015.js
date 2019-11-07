@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-card class=\"form-card\">\n  <h3>PENDAFTARAN</h3>\n  <mat-card-subtitle>DAFTARKAN TIM ANDA KE TURNAMEN</mat-card-subtitle>\n  <br />\n\n  <form [formGroup]=\"form\" (ngSubmit)=\"submitForm()\">\n    <!-- Progress Bar -->\n    <div class=\"progress form-group\" *ngIf=\"esportService.percentDone\">\n\t\t\t<div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\"\n\t\t\t\t[style.width.%]=\"esportService.percentDone\">\n\t\t\t</div>\n\t\t</div>\n\n    <!-- Image Preview -->\n    <div class=\"form-group\">\n      <div class=\"preview animated fadeInUp\" *ngIf=\"preview && preview !== null\">\n        <img [src]=\"preview\" [alt]=\"form.value.name\" style=\"width: 150px\" />\n      </div>\n    </div>\n\n    <!-- File Input -->\n    <div class=\"form-group\">\n      <input type=\"file\" (change)=\"onFileSelected($event)\"/>\n    </div>\n\n    <div class=\"form-container\">\n      <mat-form-field>\n        <input\n          matInput\n          placeholder=\"Nama tim\"\n          formControlName=\"name\"\n          id=\"name\"\n        />\n        <mat-error *ngIf=\"form?.controls?.name?.hasError('required')\"\n          >Masukkan nama tim mu, dinda</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.name?.hasError('maxLength')\"\n          >Jangan terlalu panjang, bro</mat-error\n        >\n      </mat-form-field>\n\n      <mat-form-field>\n        <input\n          matInput\n          placeholder=\"Nomor yang bisa dihubungi\"\n          formControlName=\"contact\"\n          id=\"contact\"\n        />\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('required')\"\n          >Masukkan nomor hp</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('minLength')\"\n          >Jangan ko terlalu kasian</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('maxLength')\"\n          >Panjang skali kasian</mat-error\n        >\n      </mat-form-field>\n\n      <mat-form-field>\n        <input\n          matInput\n          placeholder=\"Alamat tim\"\n          formControlName=\"address\"\n          id=\"address\"\n        />\n        <mat-error *ngIf=\"form?.controls?.address?.hasError('required')\"\n          >Masukkan alamat tim.</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.address?.hasError('maxLength')\"\n          >Uvuvwevwevwe***, terlalu panjang.</mat-error\n        >\n      </mat-form-field>\n    </div>\n\n    <!-- Submit -->\n    <div class=\"form-group\">\n      <button\n        [disabled]=\"!form.valid\"\n        mat-raised-button\n        class=\"mat-elevation-z6\"\n        color=\"accent\"\n      >\n        Daftar tim\n      </button>\n    </div>\n  </form>\n</mat-card>\n\n<br>");
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-card class=\"form-card\">\n  <h3>PENDAFTARAN</h3>\n  <mat-card-subtitle>DAFTARKAN TIM ANDA KE TURNAMEN</mat-card-subtitle>\n  <br />\n\n  <form [formGroup]=\"form\" (ngSubmit)=\"submitForm()\">\n\n    <!-- Image Preview -->\n    <div class=\"form-group\">\n      <div class=\"preview animated fadeInUp\" *ngIf=\"preview && preview !== null\">\n        <img [src]=\"preview\" [alt]=\"form.value.name\" style=\"width: 150px\" />\n      </div>\n    </div>\n\n    <!-- File Input -->\n    <div class=\"form-group\">\n      <input type=\"file\" (change)=\"onFileSelected($event)\"/>\n    </div>\n\n    <div class=\"form-container\">\n      <mat-form-field>\n        <input\n          matInput\n          placeholder=\"Nama tim\"\n          formControlName=\"name\"\n          id=\"name\"\n        />\n        <mat-error *ngIf=\"form?.controls?.name?.hasError('required')\"\n          >Masukkan nama tim mu, dinda</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.name?.hasError('maxLength')\"\n          >Jangan terlalu panjang, bro</mat-error\n        >\n      </mat-form-field>\n\n      <mat-form-field>\n        <input\n          matInput\n          placeholder=\"Nomor yang bisa dihubungi\"\n          formControlName=\"contact\"\n          id=\"contact\"\n        />\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('required')\"\n          >Masukkan nomor hp</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('minLength')\"\n          >Jangan ko terlalu kasian</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('maxLength')\"\n          >Panjang skali kasian</mat-error\n        >\n      </mat-form-field>\n\n      <mat-form-field>\n        <input\n          matInput\n          placeholder=\"Alamat tim\"\n          formControlName=\"address\"\n          id=\"address\"\n        />\n        <mat-error *ngIf=\"form?.controls?.address?.hasError('required')\"\n          >Masukkan alamat tim.</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.address?.hasError('maxLength')\"\n          >Uvuvwevwevwe***, terlalu panjang.</mat-error\n        >\n      </mat-form-field>\n    </div>\n\n    <!-- Submit -->\n    <button\n      type=\"submit\"\n      [disabled]=\"form.invalid || form.disabled\"\n      mat-raised-button\n      class=\"mat-elevation-z6\"\n      color=\"accent\"\n    >\n      Daftar tim\n    </button>\n  </form>\n</mat-card>\n\n<br>");
 
 /***/ }),
 
@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Search field -->\n<mat-form-field appearance=\"outline\">\n  <mat-label>Pencarian</mat-label>\n  <input\n    matInput\n    (keyup)=\"applyFilter($event.target.value)\"\n    placeholder=\"Cari...\"\n  />\n  <mat-icon matSuffix>search</mat-icon>\n</mat-form-field>\n\n<!-- TABLE OF TEAMS -->\n<table mat-table [dataSource]=\"DATA_SOURCE\" matSort class=\"mat-elevation-z1\">\n\n  <!-- Team's name field -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell mat-sort-header *matHeaderCellDef>Team's name</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.name }}</td>\n  </ng-container>\n\n  <!-- Contact field -->\n  <!-- <ng-container matColumnDef=\"contact\">\n    <th mat-header-cell *matHeaderCellDef>Contact</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.contact }}</td>\n  </ng-container> -->\n\n  <!-- Address field -->\n  <ng-container matColumnDef=\"address\">\n    <th mat-header-cell *matHeaderCellDef>Address</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.address }}</td>\n  </ng-container>\n\n  <!-- Logo field -->\n  <ng-container matColumnDef=\"logo\">\n    <th mat-header-cell *matHeaderCellDef class=\"table-image\">Logo</th>\n    <td mat-cell *matCellDef=\"let team\">\n      <img [src]='team.logo' [alt]='team.name' style=\"max-width: 30px;\" />\n    </td>\n  </ng-container>\n\n  <!-- displayedColumns -->\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr class=\"animated fadeInUp\" mat-row *matRowDef=\"let row; columns: displayedColumns\"></tr>\n</table>\n\n<mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Search field -->\n<mat-form-field appearance=\"outline\">\n  <mat-label>Pencarian</mat-label>\n  <input\n    matInput\n    (keyup)=\"applyFilter($event.target.value)\"\n    placeholder=\"Cari...\"\n  />\n  <mat-icon matSuffix>search</mat-icon>\n</mat-form-field>\n\n<!-- TABLE OF TEAMS -->\n<table mat-table [dataSource]=\"DATA_SOURCE\" matSort class=\"mat-elevation-z1\">\n\n  <!-- Team's name field -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell mat-sort-header *matHeaderCellDef>Team's name</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.name }}</td>\n  </ng-container>\n\n  <!-- Contact field -->\n  <!-- <ng-container matColumnDef=\"contact\">\n    <th mat-header-cell *matHeaderCellDef>Contact</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.contact }}</td>\n  </ng-container> -->\n\n  <!-- Address field -->\n  <ng-container matColumnDef=\"address\">\n    <th mat-header-cell *matHeaderCellDef>Address</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.address }}</td>\n  </ng-container>\n\n  <!-- Logo field -->\n  <ng-container matColumnDef=\"logo\">\n    <th mat-header-cell *matHeaderCellDef class=\"table-image\">Logo</th>\n    <td mat-cell *matCellDef=\"let team\">\n      <img [src]='team.logo' [alt]='team.name' style=\"max-width: 30px;\" />\n    </td>\n  </ng-container>\n\n  <!-- displayedColumns -->\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row [@rowsAnimation]=\"\" *matRowDef=\"let row; columns: displayedColumns\"></tr>\n</table>\n\n<mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\n");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Top toolbar -->\n<mat-toolbar class=\"toolbar mat-elevation-z3\">\n  <button\n    type=\"button\"\n    mat-icon-button\n    *ngIf=\"isHandset$ | async\"\n    (click)=\"sidenav.toggle()\"\n  >\n    <mat-icon>menu</mat-icon>\n  </button>\n\n  <img\n    *ngIf=\"!(isHandset$ | async)\"\n    width=\"25px\"\n    src=\"assets/images/logo.png\"\n  />\n  <a routerLink=\"/\"><span class=\"radvil\">&nbsp; TMF ESPORT</span></a>\n\n  <span class=\"spacer\"></span>\n  <div *ngIf=\"!(isHandset$ | async)\">\n    <a\n      mat-button\n      *ngFor=\"let item of navLinks\"\n      [routerLink]=\"[item.link]\"\n      routerLinkActive=\"active\"\n      ><span> {{ item.label | uppercase }}</span></a\n    >&nbsp;&nbsp;\n  </div>\n</mat-toolbar>\n\n<!-- Sidenav container -->\n<mat-sidenav-container>\n  <mat-sidenav\n    #sidenav\n    class=\"sidenav\"\n    fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n    [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n  >\n    <!-- Menu list -->\n    <div class=\"menu-group\">\n      <span class=\"nav-subt\">MAIN MENU</span>\n      <mat-nav-list *ngFor=\"let item of navLinks\" (click)=\"sidenav.toggle()\">\n        <a\n          mat-list-item\n          [routerLink]=\"[item.link]\"\n          routerLinkActive=\"active\"\n          routerLinkActiveOptions=\"{exact: true}\"\n        >\n          <mat-icon>{{ item.icon }}</mat-icon>\n          <span class=\"menu-list\">{{ item.label | uppercase }}</span>\n        </a>\n      </mat-nav-list>\n      <mat-divider></mat-divider>\n    </div>\n  </mat-sidenav>\n\n  <mat-sidenav-content class=\"page-container\">\n    <ng-content select=\"router-outlet\"></ng-content>\n\n    <!-- Footer -->\n    <div class=\"footer\">\n      <div class=\"row\">\n        <div class=\"col-sm-12 links\">\n          <a href=\"https://esport.teammodifier.com\" target=\"_blank\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-globe-asia\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Website</span>\n          </a>\n          <a href=\"https://www.github.com/radvil\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-github\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Github</span>\n          </a>\n          <a href=\"https://www.facebook.com/rtikkolakatimur\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-facebook\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Facebook</span>\n          </a>\n          <a href=\"https://www.instagram.com/rtikkolakatimur\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-instagram\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Instagram</span>\n          </a>\n          <a href=\"https://www.youtube.com/channel/UCXC56sWhi2sM22gFqpojaYg\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-youtube\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Youtube</span>\n          </a>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-12 signature\">\n          &#169; <span class=\"year\">{{ year }}</span> - Team Modifier\n          <br class=\"d-block d-sm-none\" />\n          <a matTooltip=\"Radvil\" matTooltipPosition=\"before\" href=\"#\">\n            <!-- <mat-icon fontSet=\"fas\" fontIcon=\"fa-rocket\"></mat-icon>\n            1.0.0 <span>Dev mode</span> -->\n          </a>\n        </div>\n      </div>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Top toolbar -->\n<mat-toolbar class=\"toolbar mat-elevation-z3\">\n  <button\n    type=\"button\"\n    mat-icon-button\n    *ngIf=\"isHandset$ | async\"\n    (click)=\"sidenav.toggle()\"\n  >\n    <mat-icon>menu</mat-icon>\n  </button>\n\n  <img\n    *ngIf=\"!(isHandset$ | async)\"\n    width=\"25px\"\n    src=\"assets/images/logo.png\"\n  />\n  <a routerLink=\"/\"><span class=\"radvil\">&nbsp; TMF ESPORT</span></a>\n\n  <span class=\"spacer\"></span>\n  <div *ngIf=\"!(isHandset$ | async)\">\n    <a\n      mat-button\n      *ngFor=\"let item of navLinks\"\n      [routerLink]=\"[item.link]\"\n      routerLinkActive=\"active\"\n      ><span> {{ item.label | uppercase }}</span></a\n    >&nbsp;&nbsp;\n  </div>\n</mat-toolbar>\n\n<!-- Sidenav container -->\n<mat-sidenav-container>\n  <mat-sidenav\n    #sidenav\n    class=\"sidenav\"\n    fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n    [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n  >\n    <!-- Menu list -->\n    <div class=\"menu-group\">\n      <span class=\"nav-subt\">MAIN MENU</span>\n      <mat-nav-list *ngFor=\"let item of navLinks\" (click)=\"sidenav.toggle()\">\n        <a\n          mat-list-item\n          [routerLink]=\"[item.link]\"\n          routerLinkActive=\"active\"\n          routerLinkActiveOptions=\"{exact: true}\"\n        >\n          <mat-icon>{{ item.icon }}</mat-icon>\n          <span class=\"menu-list\">{{ item.label | uppercase }}</span>\n        </a>\n      </mat-nav-list>\n      <mat-divider></mat-divider>\n    </div>\n  </mat-sidenav>\n\n  <mat-sidenav-content class=\"page-container\">\n    <router-outlet></router-outlet>\n\n    <!-- Footer -->\n    <div class=\"footer\">\n      <div class=\"row\">\n        <div class=\"col-sm-12 links\">\n          <a href=\"https://esport.teammodifier.com\" target=\"_blank\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-globe-asia\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Website</span>\n          </a>\n          <a href=\"https://www.github.com/radvil\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-github\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Github</span>\n          </a>\n          <a href=\"https://www.facebook.com/rtikkolakatimur\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-facebook\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Facebook</span>\n          </a>\n          <a href=\"https://www.instagram.com/rtikkolakatimur\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-instagram\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Instagram</span>\n          </a>\n          <a href=\"https://www.youtube.com/channel/UCXC56sWhi2sM22gFqpojaYg\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-youtube\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Youtube</span>\n          </a>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-12 signature\">\n          &#169; <span class=\"year\">{{ year }}</span> - Team Modifier\n          <br class=\"d-block d-sm-none\" />\n          <a matTooltip=\"Radvil\" matTooltipPosition=\"before\" href=\"#\">\n            <!-- <mat-icon fontSet=\"fas\" fontIcon=\"fa-rocket\"></mat-icon>\n            1.0.0 <span>Dev mode</span> -->\n          </a>\n        </div>\n      </div>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n");
 
 /***/ }),
 
@@ -367,9 +367,8 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     </mat-progress-bar>
 
     <app-layout>
-      <router-outlet></router-outlet>
     </app-layout>
-  `
+  `,
     })
 ], AppComponent);
 
@@ -531,9 +530,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _shared_esport_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/esport.service */ "./src/app/shared/esport.service.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @service-work/is-loading */ "./node_modules/@service-work/is-loading/fesm2015/service-work-is-loading.js");
+/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared */ "./src/app/shared/index.ts");
+
 
 
 
@@ -541,9 +542,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let AddTeamComponent = class AddTeamComponent {
-    constructor(router, esportService) {
+    constructor(router, esportService, isLoadingService, notification) {
         this.router = router;
         this.esportService = esportService;
+        this.isLoadingService = isLoadingService;
+        this.notification = notification;
         this.percentDone = 0;
         this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
             name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].maxLength(30)]),
@@ -568,30 +571,40 @@ let AddTeamComponent = class AddTeamComponent {
         reader.readAsDataURL(file);
     }
     submitForm() {
+        this.isLoadingService.add();
+        this.form.disable();
         this.esportService.addTeam(this.form.value.name, this.form.value.contact, this.form.value.address, this.form.value.logo)
             .subscribe((event) => {
             switch (event.type) {
-                case _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpEventType"].Sent:
+                case _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpEventType"].Sent:
                     console.log("Request has been made!");
                     break;
-                case _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpEventType"].ResponseHeader:
+                case _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpEventType"].ResponseHeader:
                     console.log("Response header has been received!");
                     break;
-                case _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpEventType"].UploadProgress:
+                case _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpEventType"].UploadProgress:
                     this.percentDone = Math.round((event.loaded / event.total) * 100);
                     console.log(`Uploaded! ${this.percentDone}%`);
                     break;
-                case _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpEventType"].Response:
-                    console.log("Team successfully created!", event.body);
-                    this.percentDone = false;
-                    this.router.navigate(["all-teams"]);
+                case _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpEventType"].Response:
+                    if (event.body.success === false) {
+                        this.notification.error(event.body.message);
+                    }
+                    else if (event.body.success === true) {
+                        this.percentDone = false;
+                        this.notification.success(event.body.message);
+                        this.router.navigate(["all-teams"]);
+                        this.isLoadingService.remove();
+                    }
             }
         });
     }
 };
 AddTeamComponent.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
-    { type: _shared_esport_service__WEBPACK_IMPORTED_MODULE_3__["EsportService"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+    { type: _shared__WEBPACK_IMPORTED_MODULE_6__["EsportService"] },
+    { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__["IsLoadingService"] },
+    { type: _shared__WEBPACK_IMPORTED_MODULE_6__["NotificationsService"] }
 ];
 AddTeamComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -634,7 +647,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/esm2015/paginator.js");
 /* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/esm2015/sort.js");
 /* harmony import */ var _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @service-work/is-loading */ "./node_modules/@service-work/is-loading/fesm2015/service-work-is-loading.js");
-/* harmony import */ var _shared_esport_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/esport.service */ "./src/app/shared/esport.service.ts");
+/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared */ "./src/app/shared/index.ts");
 
 
 
@@ -666,7 +679,7 @@ let FetchTeamsComponent = class FetchTeamsComponent {
     }
 };
 FetchTeamsComponent.ctorParameters = () => [
-    { type: _shared_esport_service__WEBPACK_IMPORTED_MODULE_6__["EsportService"] },
+    { type: _shared__WEBPACK_IMPORTED_MODULE_6__["EsportService"] },
     { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__["IsLoadingService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -679,6 +692,7 @@ FetchTeamsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-fetch-teams',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./fetch-teams.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/esport/fetch-teams/fetch-teams.component.html")).default,
+        animations: [_shared__WEBPACK_IMPORTED_MODULE_6__["elementAnimations"]],
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./fetch-teams.component.scss */ "./src/app/esport/fetch-teams/fetch-teams.component.scss")).default]
     })
 ], FetchTeamsComponent);
@@ -907,6 +921,91 @@ LayoutModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/shared/animations/element.animations.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/shared/animations/element.animations.ts ***!
+  \*********************************************************/
+/*! exports provided: elementAnimations */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "elementAnimations", function() { return elementAnimations; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm2015/animations.js");
+
+
+const elementAnimations = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["trigger"])("rowsAnimation", [
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])("void => *", [
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
+            height: "*",
+            opacity: "0",
+            transform: "translateX(-550px)",
+            "box-shadow": "none"
+        }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["sequence"])([
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])(".35s ease", Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
+                height: "*",
+                opacity: ".2",
+                transform: "translateX(0)",
+                "box-shadow": "none"
+            })),
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])(".35s ease", Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ height: "*", opacity: 1, transform: "translateX(0)" }))
+        ]) // end sequence
+    ])
+]);
+// const STEPS_ALL: any[] = [
+//   query(':enter > *', style({ opacity: 0, position: 'fixed' }), {
+//     optional: true
+//   }),
+//   query(':enter .' + ROUTE_ANIMATIONS_ELEMENTS, style({ opacity: 0 }), {
+//     optional: true
+//   }),
+//   sequence([
+//     query(
+//       ':leave > *',
+//       [
+//         style({ transform: 'translateY(0%)', opacity: 1 }),
+//         animate(
+//           '0.2s ease-in-out',
+//           style({ transform: 'translateY(-3%)', opacity: 0 })
+//         ),
+//         style({ position: 'fixed' })
+//       ],
+//       { optional: true }
+//     ),
+//     query(
+//       ':enter > *',
+//       [
+//         style({
+//           transform: 'translateY(-3%)',
+//           opacity: 0,
+//           position: 'static'
+//         }),
+//         animate(
+//           '0.5s ease-in-out',
+//           style({ transform: 'translateY(0%)', opacity: 1 })
+//         )
+//       ],
+//       { optional: true }
+//     )
+//   ]),
+//   query(
+//     ':enter .' + ROUTE_ANIMATIONS_ELEMENTS,
+//     stagger(75, [
+//       style({ transform: 'translateY(10%)', opacity: 0 }),
+//       animate(
+//         '0.5s ease-in-out',
+//         style({ transform: 'translateY(0%)', opacity: 1 })
+//       )
+//     ]),
+//     { optional: true }
+//   )
+// ];
+
+
+/***/ }),
+
 /***/ "./src/app/shared/esport.service.ts":
 /*!******************************************!*\
   !*** ./src/app/shared/esport.service.ts ***!
@@ -955,6 +1054,33 @@ EsportService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         providedIn: 'root'
     })
 ], EsportService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/index.ts":
+/*!*********************************!*\
+  !*** ./src/app/shared/index.ts ***!
+  \*********************************/
+/*! exports provided: EsportService, NotificationsService, elementAnimations */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _esport_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./esport.service */ "./src/app/shared/esport.service.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EsportService", function() { return _esport_service__WEBPACK_IMPORTED_MODULE_1__["EsportService"]; });
+
+/* harmony import */ var _notifications_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./notifications.service */ "./src/app/shared/notifications.service.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NotificationsService", function() { return _notifications_service__WEBPACK_IMPORTED_MODULE_2__["NotificationsService"]; });
+
+/* harmony import */ var _animations_element_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animations/element.animations */ "./src/app/shared/animations/element.animations.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "elementAnimations", function() { return _animations_element_animations__WEBPACK_IMPORTED_MODULE_3__["elementAnimations"]; });
+
+
+
+
 
 
 
@@ -1041,6 +1167,77 @@ MaterialModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         ]
     })
 ], MaterialModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/notifications.service.ts":
+/*!*************************************************!*\
+  !*** ./src/app/shared/notifications.service.ts ***!
+  \*************************************************/
+/*! exports provided: NotificationsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationsService", function() { return NotificationsService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+let NotificationsService = class NotificationsService {
+    constructor(snackBar, zone) {
+        this.snackBar = snackBar;
+        this.zone = zone;
+    }
+    default(message) {
+        this.show(message, {
+            duration: 2000,
+            panelClass: 'default-notification-overlay'
+        });
+    }
+    info(message) {
+        this.show(message, {
+            duration: 2000,
+            panelClass: 'info-notification-overlay'
+        });
+    }
+    success(message) {
+        this.show(message, {
+            duration: 2000,
+            panelClass: 'success-notification-overlay'
+        });
+    }
+    warn(message) {
+        this.show(message, {
+            duration: 2500,
+            panelClass: 'warning-notification-overlay'
+        });
+    }
+    error(message) {
+        this.show(message, {
+            duration: 3000,
+            panelClass: 'error-notification-overlay'
+        });
+    }
+    show(message, configuration) {
+        // Need to open snackBar from Angular zone to prevent issues with its position per
+        // https://stackoverflow.com/questions/50101912/snackbar-position-wrong-when-use-errorhandler-in-angular-5-and-material
+        this.zone.run(() => this.snackBar.open(message, null, configuration));
+    }
+};
+NotificationsService.ctorParameters = () => [
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSnackBar"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"] }
+];
+NotificationsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], NotificationsService);
 
 
 
