@@ -32,7 +32,20 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-card class=\"form-card\">\n  <h3>PENDAFTARAN</h3>\n  <mat-card-subtitle>DAFTARKAN TIM ANDA KE TURNAMEN</mat-card-subtitle>\n  <br />\n\n  <form [formGroup]=\"form\" (ngSubmit)=\"submitForm()\">\n\n    <!-- Image Preview -->\n    <div class=\"form-group\">\n      <div class=\"preview animated fadeInUp\" *ngIf=\"preview && preview !== null\">\n        <img [src]=\"preview\" [alt]=\"form.value.name\" style=\"width: 150px\" />\n      </div>\n    </div>\n\n    <!-- File Input -->\n    <div class=\"form-group\">\n      <input type=\"file\" (change)=\"onFileSelected($event)\"/>\n    </div>\n\n    <div class=\"form-container\">\n      <mat-form-field>\n        <input\n          matInput\n          placeholder=\"Nama tim\"\n          formControlName=\"name\"\n          id=\"name\"\n        />\n        <mat-error *ngIf=\"form?.controls?.name?.hasError('required')\"\n          >Masukkan nama tim mu, dinda</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.name?.hasError('maxLength')\"\n          >Jangan terlalu panjang, bro</mat-error\n        >\n      </mat-form-field>\n\n      <mat-form-field>\n        <input\n          matInput\n          placeholder=\"Nomor yang bisa dihubungi\"\n          formControlName=\"contact\"\n          id=\"contact\"\n        />\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('required')\"\n          >Masukkan nomor hp</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('minLength')\"\n          >Jangan ko terlalu kasian</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('maxLength')\"\n          >Panjang skali kasian</mat-error\n        >\n      </mat-form-field>\n\n      <mat-form-field>\n        <input\n          matInput\n          placeholder=\"Alamat tim\"\n          formControlName=\"address\"\n          id=\"address\"\n        />\n        <mat-error *ngIf=\"form?.controls?.address?.hasError('required')\"\n          >Masukkan alamat tim.</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.address?.hasError('maxLength')\"\n          >Uvuvwevwevwe***, terlalu panjang.</mat-error\n        >\n      </mat-form-field>\n    </div>\n\n    <!-- Submit -->\n    <button\n      type=\"submit\"\n      [disabled]=\"form.invalid || form.disabled\"\n      mat-raised-button\n      class=\"mat-elevation-z6\"\n      color=\"accent\"\n    >\n      Daftar tim\n    </button>\n  </form>\n</mat-card>\n\n<br>");
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-card class=\"form-card\">\n  <h3>PENDAFTARAN</h3>\n  <mat-card-subtitle>DAFTARKAN TIM ANDA KE TURNAMEN</mat-card-subtitle>\n  <br />\n\n  <form [formGroup]=\"form\" (ngSubmit)=\"submitForm()\">\n\n    <!-- Image Preview -->\n    <div class=\"form-group\">\n      <div class=\"preview\" [@rowsAnimation]=\"\" *ngIf=\"preview && preview !== null\">\n        <img [src]=\"preview\" [alt]=\"form.value.name\" style=\"width: 150px\" />\n      </div>\n    </div>\n\n    <!-- File Input -->\n    <div class=\"form-group\">\n      <input type=\"file\" (change)=\"onFileSelected($event)\"/>\n    </div>\n\n    <div class=\"form-container\">\n      <mat-form-field [@rowsAnimation]=\"\">\n        <input\n          matInput\n          placeholder=\"Nama tim\"\n          formControlName=\"name\"\n          id=\"name\"\n        />\n        <mat-error *ngIf=\"form?.controls?.name?.hasError('required')\"\n          >Masukkan nama tim</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.name?.hasError('maxLength')\"\n          >Jangan terlalu panjang, bro</mat-error\n        >\n      </mat-form-field>\n\n      <mat-form-field [@rowsAnimation]=\"\">\n        <input\n          matInput\n          placeholder=\"Nomor yang bisa dihubungi\"\n          formControlName=\"contact\"\n          id=\"contact\"\n        />\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('required')\"\n          >Masukkan nomor hp</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('minLength')\"\n          >Jangan ko terlalu kasian</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.contact?.hasError('maxLength')\"\n          >Panjang skali kasian</mat-error\n        >\n      </mat-form-field>\n\n      <mat-form-field [@rowsAnimation]=\"\">\n        <input\n          matInput\n          placeholder=\"Alamat tim\"\n          formControlName=\"address\"\n          id=\"address\"\n        />\n        <mat-error *ngIf=\"form?.controls?.address?.hasError('required')\"\n          >Masukkan alamat tim.</mat-error\n        >\n        <mat-error *ngIf=\"form?.controls?.address?.hasError('maxLength')\"\n          >Uvuvwevwevwe***, terlalu panjang.</mat-error\n        >\n      </mat-form-field>\n    </div>\n\n    <!-- Submit -->\n    <button\n      type=\"submit\"\n      [disabled]=\"form.invalid || form.disabled\"\n      mat-raised-button\n      class=\"mat-elevation-z6\"\n      color=\"accent\"\n    >\n      Daftar tim\n    </button>\n  </form>\n</mat-card>\n\n<br>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/esport/edit-teams/edit-teams.component.html":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/esport/edit-teams/edit-teams.component.html ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Search field -->\n<mat-form-field appearance=\"outline\">\n    <mat-label>Pencarian</mat-label>\n    <input\n      matInput\n      (keyup)=\"applyFilter($event.target.value)\"\n      placeholder=\"Cari...\"\n    />\n    <mat-icon matSuffix>search</mat-icon>\n  </mat-form-field>\n  \n  <!-- TABLE OF TEAMS -->\n  <table mat-table [dataSource]=\"DATA_SOURCE\" matSort class=\"mat-elevation-z1\">\n  \n    <!-- isVerified field -->\n    <ng-container matColumnDef=\"isVerified\">\n      <th mat-header-cell *matHeaderCellDef>Status</th>\n      <td mat-cell *matCellDef=\"let team\">\n        <mat-icon *ngIf=\"team.isVerified === true\" style=\"color: green;\">verified_user</mat-icon>\n        <mat-icon *ngIf=\"team.isVerified === false\" style=\"color: red;\">clear</mat-icon>\n      </td>\n    </ng-container>\n  \n    <!-- Team's name field -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell mat-sort-header *matHeaderCellDef>Team's name</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.name }}</td>\n    </ng-container>\n  \n    <!-- Address field -->\n    <ng-container matColumnDef=\"address\">\n      <th mat-header-cell *matHeaderCellDef>Address</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.address }}</td>\n    </ng-container>\n\n    <!-- Score field -->\n    <ng-container matColumnDef=\"score\">\n      <th mat-header-cell mat-sort-header *matHeaderCellDef>Score</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.score }}</td>\n    </ng-container>\n  \n    <!-- Logo field -->\n    <ng-container matColumnDef=\"logo\">\n      <th mat-header-cell *matHeaderCellDef class=\"table-image\">Logo</th>\n      <td mat-cell *matCellDef=\"let team\">\n        <img [src]='team.logo' [alt]='team.name' style=\"max-width: 30px;\" />\n      </td>\n    </ng-container>\n\n    <!-- Action Column -->\n    <ng-container matColumnDef=\"action\">\n      <th mat-header-cell *matHeaderCellDef class=\"action-link\"><mat-icon>edit</mat-icon></th>\n      <td mat-cell *matCellDef=\"let team; let i=index\" class=\"action-link\">\n        <!-- <a mat-icon-button (click)=\"editScore(team)\"><mat-icon>edit</mat-icon></a> -->\n        <mat-slide-toggle\n          [checked]=\"isVerified === true && team.isVerified === true\"\n          (change)=\"onToggle(i, $event)\"\n        ></mat-slide-toggle>\n      </td>\n    </ng-container>\n  \n    <!-- displayedColumns -->\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row [@rowsAnimation]=\"\" *matRowDef=\"let row; columns: displayedColumns\"></tr>\n  </table>\n  \n  <mat-paginator [pageSizeOptions]=\"[5, 10, 20, 50]\" showFirstLastButtons></mat-paginator>\n");
 
 /***/ }),
 
@@ -45,20 +58,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Search field -->\n<mat-form-field appearance=\"outline\">\n  <mat-label>Pencarian</mat-label>\n  <input\n    matInput\n    (keyup)=\"applyFilter($event.target.value)\"\n    placeholder=\"Cari...\"\n  />\n  <mat-icon matSuffix>search</mat-icon>\n</mat-form-field>\n\n<!-- TABLE OF TEAMS -->\n<table mat-table [dataSource]=\"DATA_SOURCE\" matSort class=\"mat-elevation-z1\">\n\n  <!-- Team's name field -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell mat-sort-header *matHeaderCellDef>Team's name</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.name }}</td>\n  </ng-container>\n\n  <!-- Contact field -->\n  <!-- <ng-container matColumnDef=\"contact\">\n    <th mat-header-cell *matHeaderCellDef>Contact</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.contact }}</td>\n  </ng-container> -->\n\n  <!-- Address field -->\n  <ng-container matColumnDef=\"address\">\n    <th mat-header-cell *matHeaderCellDef>Address</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.address }}</td>\n  </ng-container>\n\n  <!-- Logo field -->\n  <ng-container matColumnDef=\"logo\">\n    <th mat-header-cell *matHeaderCellDef class=\"table-image\">Logo</th>\n    <td mat-cell *matCellDef=\"let team\">\n      <img [src]='team.logo' [alt]='team.name' style=\"max-width: 30px;\" />\n    </td>\n  </ng-container>\n\n  <!-- displayedColumns -->\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row [@rowsAnimation]=\"\" *matRowDef=\"let row; columns: displayedColumns\"></tr>\n</table>\n\n<mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Search field -->\n<mat-form-field appearance=\"outline\">\n  <mat-label>Pencarian</mat-label>\n  <input\n    matInput\n    (keyup)=\"applyFilter($event.target.value)\"\n    placeholder=\"Cari...\"\n  />\n  <mat-icon matSuffix>search</mat-icon>\n</mat-form-field>\n\n<!-- TABLE OF TEAMS -->\n<table mat-table [dataSource]=\"DATA_SOURCE\" matSort class=\"mat-elevation-z1\">\n\n  <!-- isVerified field -->\n  <ng-container matColumnDef=\"isVerified\">\n    <th mat-header-cell *matHeaderCellDef>Status</th>\n    <td mat-cell *matCellDef=\"let team\">\n      <mat-icon *ngIf=\"team.isVerified === true\" style=\"color: green;\">verified_user</mat-icon>\n      <mat-icon *ngIf=\"team.isVerified === false\" style=\"color: red;\">clear</mat-icon>\n    </td>\n  </ng-container>\n\n  <!-- Team's name field -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell mat-sort-header *matHeaderCellDef>Team's name</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.name }}</td>\n  </ng-container>\n\n  <!-- Address field -->\n  <ng-container matColumnDef=\"address\">\n    <th mat-header-cell *matHeaderCellDef>Address</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.address }}</td>\n  </ng-container>\n\n  <!-- Logo field -->\n  <ng-container matColumnDef=\"logo\">\n    <th mat-header-cell *matHeaderCellDef class=\"table-image\">Logo</th>\n    <td mat-cell *matCellDef=\"let team\">\n      <img [src]='team.logo' [alt]='team.name' style=\"max-width: 30px;\" />\n    </td>\n  </ng-container>\n\n  <!-- displayedColumns -->\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row [@rowsAnimation]=\"\" *matRowDef=\"let row; columns: displayedColumns\"></tr>\n</table>\n\n<mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\n");
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/esport/matches/matches.component.html":
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/esport/profile/profile.component.html":
 /*!*********************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/esport/matches/matches.component.html ***!
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/esport/profile/profile.component.html ***!
   \*********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"animated fadeInUp\">\n  <h2 class=\"radvil\">Papan Skor</h2>\n</div>\n<hr />\n\n<!-- Search field -->\n<mat-form-field appearance=\"outline\">\n  <mat-label>Cari..</mat-label>\n  <input\n    matInput\n    (keyup)=\"applyFilter($event.target.value)\"\n    placeholder=\"Search\"\n  />\n  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n</mat-form-field>\n\n<!-- TABLE OF TEAMS -->\n<table mat-table [dataSource]=\"DATA_SOURCE\" matSort class=\"mat-elevation-z1\">\n\n  <!-- Logo field -->\n  <ng-container matColumnDef=\"logo\">\n    <th mat-header-cell *matHeaderCellDef>Logo</th>\n    <td mat-cell *matCellDef=\"let team\">\n      <img [src]=[team.logo] style=\"max-width: 30px;\" />\n    </td>\n  </ng-container>\n\n  <!-- Team's name field -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell mat-sort-header *matHeaderCellDef>Team's name</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.name }}</td>\n  </ng-container>\n  \n  <!-- Team's address field -->\n  <ng-container matColumnDef=\"address\">\n    <th mat-header-cell *matHeaderCellDef>Team's address</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.address }}</td>\n  </ng-container>\n\n  <!-- Score field -->\n  <ng-container matColumnDef=\"score\">\n    <th mat-header-cell mat-sort-header *matHeaderCellDef>Score</th>\n    <td mat-cell *matCellDef=\"let team\">{{ team.score }}</td>\n  </ng-container>\n\n  <!-- Action Column -->\n  <ng-container matColumnDef=\"action\">\n    <th mat-header-cell *matHeaderCellDef></th>\n    <td mat-cell *matCellDef=\"let element\" class=\"action-link\">\n      <a mat-icon-button (click)=\"editScore(team)\"><mat-icon>edit</mat-icon></a>\n    </td>\n  </ng-container>\n\n\n  <!-- displayedColumns -->\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns\"></tr>\n</table>\n\n<mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n  <div class=\"col-md-6\">\n    <mat-card>\n      <mat-card-header>\n        <img mat-card-avatar src=\"../../../assets/images/teams/dota2.png\" alt=\"logo team\">\n        <mat-card-title>TEAM NAME</mat-card-title>\n        <!-- <mat-card-title class=\"lead\">Jalan Kontunaga, Sultra</mat-card-title> -->\n      </mat-card-header>\n      <img mat-card-image src=\"../../../assets/images/posts/Smile-Quote.png\" alt=\"card image\">\n      <mat-card-content style=\"text-align: justify;\">\n        <h6>Team address: Jalan Kontunaga, Sultra</h6>\n        <h6>Contact person: 0833 3333 3333</h6>\n      </mat-card-content>\n    </mat-card>\n  </div>\n  <div class=\"col-md-6\">\n    <div class=\"text-center\" style=\"margin-top: 50px;\">\n      <!-- <mat-icon style=\"color: green;\">verified_user</mat-icon> -->\n      <mat-icon style=\"color: red;\">clear</mat-icon>\n    </div>\n    <br><br>\n    <!-- <h3 class=\"text-center\">This team has been verified.</h3> -->\n    <h3 class=\"text-center\">This team is not yet verified.</h3>\n\n    <div class=\"upload\">\n      <input type=\"file\" />\n      <button mat-raised-button color=\"accent\">Upload file</button>\n    </div>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -71,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Top toolbar -->\n<mat-toolbar class=\"toolbar mat-elevation-z3\">\n  <button\n    type=\"button\"\n    mat-icon-button\n    *ngIf=\"isHandset$ | async\"\n    (click)=\"sidenav.toggle()\"\n  >\n    <mat-icon>menu</mat-icon>\n  </button>\n\n  <img\n    *ngIf=\"!(isHandset$ | async)\"\n    width=\"25px\"\n    src=\"assets/images/logo.png\"\n  />\n  <a routerLink=\"/\"><span class=\"radvil\">&nbsp; TMF ESPORT</span></a>\n\n  <span class=\"spacer\"></span>\n  <div *ngIf=\"!(isHandset$ | async)\">\n    <a\n      mat-button\n      *ngFor=\"let item of navLinks\"\n      [routerLink]=\"[item.link]\"\n      routerLinkActive=\"active\"\n      ><span> {{ item.label | uppercase }}</span></a\n    >&nbsp;&nbsp;\n  </div>\n</mat-toolbar>\n\n<!-- Sidenav container -->\n<mat-sidenav-container>\n  <mat-sidenav\n    #sidenav\n    class=\"sidenav\"\n    fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n    [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n  >\n    <!-- Menu list -->\n    <div class=\"menu-group\">\n      <span class=\"nav-subt\">MAIN MENU</span>\n      <mat-nav-list *ngFor=\"let item of navLinks\" (click)=\"sidenav.toggle()\">\n        <a\n          mat-list-item\n          [routerLink]=\"[item.link]\"\n          routerLinkActive=\"active\"\n          routerLinkActiveOptions=\"{exact: true}\"\n        >\n          <mat-icon>{{ item.icon }}</mat-icon>\n          <span class=\"menu-list\">{{ item.label | uppercase }}</span>\n        </a>\n      </mat-nav-list>\n      <mat-divider></mat-divider>\n    </div>\n  </mat-sidenav>\n\n  <mat-sidenav-content class=\"page-container\">\n    <router-outlet></router-outlet>\n\n    <!-- Footer -->\n    <div class=\"footer\">\n      <div class=\"row\">\n        <div class=\"col-sm-12 links\">\n          <a href=\"https://esport.teammodifier.com\" target=\"_blank\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-globe-asia\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Website</span>\n          </a>\n          <a href=\"https://www.github.com/radvil\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-github\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Github</span>\n          </a>\n          <a href=\"https://www.facebook.com/rtikkolakatimur\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-facebook\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Facebook</span>\n          </a>\n          <a href=\"https://www.instagram.com/rtikkolakatimur\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-instagram\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Instagram</span>\n          </a>\n          <a href=\"https://www.youtube.com/channel/UCXC56sWhi2sM22gFqpojaYg\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-youtube\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Youtube</span>\n          </a>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-12 signature\">\n          &#169; <span class=\"year\">{{ year }}</span> - Team Modifier\n          <br class=\"d-block d-sm-none\" />\n          <a matTooltip=\"Radvil\" matTooltipPosition=\"before\" href=\"#\">\n            <!-- <mat-icon fontSet=\"fas\" fontIcon=\"fa-rocket\"></mat-icon>\n            1.0.0 <span>Dev mode</span> -->\n          </a>\n        </div>\n      </div>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Top toolbar -->\n<mat-toolbar class=\"toolbar mat-elevation-z3\">\n  <button\n    type=\"button\"\n    mat-icon-button\n    *ngIf=\"isHandset$ | async\"\n    (click)=\"sidenav.toggle()\"\n  >\n    <mat-icon>menu</mat-icon>\n  </button>\n\n  <img\n    *ngIf=\"!(isHandset$ | async)\"\n    width=\"25px\"\n    src=\"assets/images/logo.png\"\n  />\n  <a routerLink=\"/\"><span class=\"radvil\">&nbsp;TMF ESPORT</span></a>\n\n  <span class=\"spacer\"></span>\n  <div *ngIf=\"!(isHandset$ | async)\">\n    <a\n      mat-button\n      routerLink=\"auth/sign-in\"\n      routerLinkActive=\"active\"\n      *ngIf=\"!authService.loggedIn()\"\n    >\n      <span>LOGIN</span>\n    </a>\n    <a\n      mat-button\n      routerLink=\"esport/registration\"\n      routerLinkActive=\"active\"\n      *ngIf=\"!authService.loggedIn()\"\n    >\n      <span>DAFTAR TIM</span>\n    </a>\n    <a\n      mat-button\n      routerLink=\"esport/edit-teams\"\n      routerLinkActive=\"active\"\n      *ngIf=\"authService.loggedIn()\"\n    >\n      <span>EDIT TIM</span>\n    </a>\n    <a\n      mat-button\n      routerLink=\"esport/all-teams\"\n      routerLinkActive=\"active\"\n    >\n      <span>SEMUA TIM</span>\n    </a>\n    <a\n      mat-button\n      routerLink=\"esport/profile\"\n      routerLinkActive=\"active\"\n      *ngIf=\"authService.loggedIn()\"\n    >\n      <span>PROFILE</span>\n    </a>\n    <a *ngIf=\"authService.loggedIn()\" mat-button (click)=\"onLogoutClick()\">\n      <span>LOGOUT</span>\n    </a>\n  </div>\n</mat-toolbar>\n\n<!-- Sidenav container -->\n<mat-sidenav-container>\n  <mat-sidenav\n    #sidenav\n    class=\"sidenav\"\n    fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n    [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n  >\n    <!-- Menu list -->\n    <div class=\"menu-group\">\n      <span class=\"nav-subt\">MAIN MENU</span>\n      <mat-nav-list (click)=\"sidenav.toggle()\">\n        <a\n          mat-list-item\n          routerLink=\"auth/sign-in\"\n          routerLinkActive=\"active\"\n          *ngIf=\"!authService.loggedIn()\"\n        >\n          <mat-icon>home</mat-icon>\n          <span class=\"menu-list\">LOGIN</span>\n        </a>\n        <a\n          mat-list-item\n          routerLink=\"esport/registration\"\n          routerLinkActive=\"active\"\n          *ngIf=\"!authService.loggedIn()\"\n        >\n          <mat-icon>home</mat-icon>\n          <span class=\"menu-list\">DAFTAR TIM</span>\n        </a>\n        <a\n          mat-list-item\n          routerLink=\"esport/all-teams\"\n          routerLinkActive=\"active\"\n        >\n          <mat-icon>home</mat-icon>\n          <span class=\"menu-list\">SEMUA TIM</span>\n        </a>\n        <a\n          mat-list-item\n          *ngIf=\"authService.loggedIn()\"\n          routerLink=\"esport/edit-teams\"\n          routerLinkActive=\"active\"\n        >\n          <mat-icon>edit</mat-icon>\n          <span class=\"menu-list\">EDIT TIM</span>\n        </a>\n        <a\n          mat-list-item\n          *ngIf=\"authService.loggedIn()\"\n          (click)=\"onLogoutClick()\"\n        >\n          <mat-icon>home</mat-icon>\n          <span class=\"menu-list\">LOGOUT</span>\n        </a>\n      </mat-nav-list>\n      <mat-divider></mat-divider>\n    </div>\n  </mat-sidenav>\n\n  <mat-sidenav-content class=\"page-container\">\n    <router-outlet></router-outlet>\n\n    <!-- Footer -->\n    <div class=\"footer\">\n      <div class=\"row\">\n        <div class=\"col-sm-12 links\">\n          <a href=\"https://esport.teammodifier.com\" target=\"_blank\">\n            <mat-icon fontSet=\"fas\" fontIcon=\"fa-globe-asia\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Website</span>\n          </a>\n          <a href=\"https://www.github.com/radvil\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-github\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Github</span>\n          </a>\n          <a href=\"https://www.facebook.com/rtikkolakatimur\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-facebook\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Facebook</span>\n          </a>\n          <a href=\"https://www.instagram.com/rtikkolakatimur\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-instagram\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Instagram</span>\n          </a>\n          <a href=\"https://www.youtube.com/channel/UCXC56sWhi2sM22gFqpojaYg\" target=\"_blank\">\n            <mat-icon fontSet=\"fab\" fontIcon=\"fa-youtube\"></mat-icon>\n            <span *ngIf=\"!(isHandset$ | async)\">Youtube</span>\n          </a>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-12 signature\">\n          &#169; <span class=\"year\">{{ year }}</span> - Team Modifier\n          <br class=\"d-block d-sm-none\" />\n          <a matTooltip=\"Radvil\" matTooltipPosition=\"before\" href=\"#\">\n            <!-- <mat-icon fontSet=\"fas\" fontIcon=\"fa-rocket\"></mat-icon>\n            1.0.0 <span>Dev mode</span> -->\n          </a>\n        </div>\n      </div>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n");
 
 /***/ }),
 
@@ -392,14 +405,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _shared_material_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shared/material.module */ "./src/app/shared/material.module.ts");
-/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
-/* harmony import */ var _layout_layout_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./layout/layout.module */ "./src/app/layout/layout.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _shared_esport_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/esport.service */ "./src/app/shared/esport.service.ts");
-/* harmony import */ var _esport_fetch_teams_fetch_teams_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./esport/fetch-teams/fetch-teams.component */ "./src/app/esport/fetch-teams/fetch-teams.component.ts");
-/* harmony import */ var _esport_add_team_add_team_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./esport/add-team/add-team.component */ "./src/app/esport/add-team/add-team.component.ts");
-/* harmony import */ var _esport_matches_matches_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./esport/matches/matches.component */ "./src/app/esport/matches/matches.component.ts");
+/* harmony import */ var _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @auth0/angular-jwt */ "./node_modules/@auth0/angular-jwt/index.js");
+/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared */ "./src/app/shared/index.ts");
+/* harmony import */ var _shared_guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./shared/guards/auth.guard */ "./src/app/shared/guards/auth.guard.ts");
+/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
+/* harmony import */ var _layout_layout_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./layout/layout.module */ "./src/app/layout/layout.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _esport_fetch_teams_fetch_teams_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./esport/fetch-teams/fetch-teams.component */ "./src/app/esport/fetch-teams/fetch-teams.component.ts");
+/* harmony import */ var _esport_add_team_add_team_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./esport/add-team/add-team.component */ "./src/app/esport/add-team/add-team.component.ts");
+/* harmony import */ var _esport_edit_teams_edit_teams_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./esport/edit-teams/edit-teams.component */ "./src/app/esport/edit-teams/edit-teams.component.ts");
+/* harmony import */ var _esport_profile_profile_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./esport/profile/profile.component */ "./src/app/esport/profile/profile.component.ts");
+
+
+
 
 
 
@@ -415,29 +433,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const ESPORT_COMPONENTS = [
-    _esport_fetch_teams_fetch_teams_component__WEBPACK_IMPORTED_MODULE_11__["FetchTeamsComponent"],
-    _esport_add_team_add_team_component__WEBPACK_IMPORTED_MODULE_12__["AddTeamComponent"],
-    _esport_matches_matches_component__WEBPACK_IMPORTED_MODULE_13__["MatchesComponent"]
+    _esport_fetch_teams_fetch_teams_component__WEBPACK_IMPORTED_MODULE_12__["FetchTeamsComponent"],
+    _esport_add_team_add_team_component__WEBPACK_IMPORTED_MODULE_13__["AddTeamComponent"],
+    _esport_edit_teams_edit_teams_component__WEBPACK_IMPORTED_MODULE_14__["EditTeamsComponent"]
 ];
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
-            ...ESPORT_COMPONENTS
+            _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
+            ...ESPORT_COMPONENTS,
+            _esport_profile_profile_component__WEBPACK_IMPORTED_MODULE_15__["ProfileComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-            _app_routing__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
-            _layout_layout_module__WEBPACK_IMPORTED_MODULE_8__["LayoutModule"],
+            _app_routing__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"],
+            _layout_layout_module__WEBPACK_IMPORTED_MODULE_10__["LayoutModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
-            _shared_material_module__WEBPACK_IMPORTED_MODULE_6__["MaterialModule"],
+            _shared__WEBPACK_IMPORTED_MODULE_7__["MaterialModule"],
+            _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_6__["JwtModule"].forRoot({
+                config: {
+                    tokenGetter: function tokenGetter() {
+                        return localStorage.getItem('access_token');
+                    },
+                    whitelistedDomains: ['https://localhost:3000', 'https://tmf-esport.herokuapp.com'],
+                }
+            })
         ],
-        providers: [_shared_esport_service__WEBPACK_IMPORTED_MODULE_10__["EsportService"]],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
+        providers: [_shared__WEBPACK_IMPORTED_MODULE_7__["EsportService"], _shared_guards_auth_guard__WEBPACK_IMPORTED_MODULE_8__["AuthGuard"]],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]]
     })
 ], AppModule);
 
@@ -459,6 +486,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _esport__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./esport */ "./src/app/esport/index.ts");
+/* harmony import */ var _shared_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shared/guards/auth.guard */ "./src/app/shared/guards/auth.guard.ts");
+
 
 
 
@@ -466,6 +495,11 @@ __webpack_require__.r(__webpack_exports__);
 const appRoutes = [
     {
         path: '',
+        redirectTo: 'esport',
+        pathMatch: 'full'
+    },
+    {
+        path: 'esport',
         children: [
             {
                 path: '',
@@ -474,21 +508,31 @@ const appRoutes = [
             },
             {
                 path: 'all-teams',
-                component: _esport__WEBPACK_IMPORTED_MODULE_3__["FetchTeamsComponent"]
+                component: _esport__WEBPACK_IMPORTED_MODULE_3__["FetchTeamsComponent"],
             },
             {
                 path: 'registration',
                 component: _esport__WEBPACK_IMPORTED_MODULE_3__["AddTeamComponent"]
             },
             {
-                path: 'matches',
-                component: _esport__WEBPACK_IMPORTED_MODULE_3__["MatchesComponent"]
+                path: 'profile',
+                component: _esport__WEBPACK_IMPORTED_MODULE_3__["ProfileComponent"],
+                canActivate: [_shared_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
+            },
+            {
+                path: 'edit-teams',
+                component: _esport__WEBPACK_IMPORTED_MODULE_3__["EditTeamsComponent"],
+                canActivate: [_shared_guards_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
             },
             {
                 path: '**',
                 redirectTo: 'registration'
             }
         ]
+    },
+    {
+        path: 'auth',
+        loadChildren: () => __webpack_require__.e(/*! import() | auth-auth-module */ "auth-auth-module").then(__webpack_require__.bind(null, /*! ./auth/auth.module */ "./src/app/auth/auth.module.ts")).then(m => m.AuthModule)
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -593,7 +637,7 @@ let AddTeamComponent = class AddTeamComponent {
                     else if (event.body.success === true) {
                         this.percentDone = false;
                         this.notification.success(event.body.message);
-                        this.router.navigate(["all-teams"]);
+                        this.router.navigate(["esport/profile"]);
                         this.isLoadingService.remove();
                     }
             }
@@ -610,9 +654,111 @@ AddTeamComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-teams-add',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./add-team.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/esport/add-team/add-team.component.html")).default,
+        animations: [_shared__WEBPACK_IMPORTED_MODULE_6__["elementAnimations"]]
+        // changeDetection: ChangeDetectionStrategy.OnPush
+        ,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./add-team.component.scss */ "./src/app/esport/add-team/add-team.component.scss")).default]
     })
 ], AddTeamComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/esport/edit-teams/edit-teams.component.scss":
+/*!*************************************************************!*\
+  !*** ./src/app/esport/edit-teams/edit-teams.component.scss ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("table {\n  width: 100%;\n}\n\ntd.mat-cell:last-of-type,\ntd.mat-footer-cell:last-of-type,\nth.mat-header-cell:last-of-type {\n  padding-right: 10px;\n}\n\ntd.mat-cell:first-of-type,\ntd.mat-footer-cell:first-of-type,\nth.mat-header-cell:first-of-type {\n  padding-left: 10px;\n}\n\n.mat-form-field {\n  font-size: 14px;\n  width: 100%;\n}\n\n.action-link {\n  padding-right: 10px;\n  padding-left: 10px;\n  text-align: end;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2plcmFwYWFhaC9Db2Rlcy9fU0FNUExFUy90ZWFtbW9kaWZpZXIvY2xpZW50L3NyYy9hcHAvZXNwb3J0L2VkaXQtdGVhbXMvZWRpdC10ZWFtcy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvZXNwb3J0L2VkaXQtdGVhbXMvZWRpdC10ZWFtcy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQUE7QUNDRjs7QURHQTs7O0VBR0UsbUJBQUE7QUNBRjs7QURHQTs7O0VBR0Usa0JBQUE7QUNBRjs7QURHQTtFQUNFLGVBQUE7RUFDQSxXQUFBO0FDQUY7O0FER0E7RUFDRSxtQkFBQTtFQUNBLGtCQUFBO0VBQ0EsZUFBQTtBQ0FGIiwiZmlsZSI6InNyYy9hcHAvZXNwb3J0L2VkaXQtdGVhbXMvZWRpdC10ZWFtcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbInRhYmxlIHtcbiAgd2lkdGg6IDEwMCU7XG4gIC8vIG1hcmdpbjogMTBweCBhdXRvO1xufVxuXG50ZC5tYXQtY2VsbDpsYXN0LW9mLXR5cGUsXG50ZC5tYXQtZm9vdGVyLWNlbGw6bGFzdC1vZi10eXBlLFxudGgubWF0LWhlYWRlci1jZWxsOmxhc3Qtb2YtdHlwZSB7XG4gIHBhZGRpbmctcmlnaHQ6IDEwcHg7XG59XG5cbnRkLm1hdC1jZWxsOmZpcnN0LW9mLXR5cGUsXG50ZC5tYXQtZm9vdGVyLWNlbGw6Zmlyc3Qtb2YtdHlwZSxcbnRoLm1hdC1oZWFkZXItY2VsbDpmaXJzdC1vZi10eXBlIHtcbiAgcGFkZGluZy1sZWZ0OiAxMHB4O1xufVxuXG4ubWF0LWZvcm0tZmllbGQge1xuICBmb250LXNpemU6IDE0cHg7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uYWN0aW9uLWxpbmsge1xuICBwYWRkaW5nLXJpZ2h0OiAxMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG4gIHRleHQtYWxpZ246ZW5kO1xufSIsInRhYmxlIHtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbnRkLm1hdC1jZWxsOmxhc3Qtb2YtdHlwZSxcbnRkLm1hdC1mb290ZXItY2VsbDpsYXN0LW9mLXR5cGUsXG50aC5tYXQtaGVhZGVyLWNlbGw6bGFzdC1vZi10eXBlIHtcbiAgcGFkZGluZy1yaWdodDogMTBweDtcbn1cblxudGQubWF0LWNlbGw6Zmlyc3Qtb2YtdHlwZSxcbnRkLm1hdC1mb290ZXItY2VsbDpmaXJzdC1vZi10eXBlLFxudGgubWF0LWhlYWRlci1jZWxsOmZpcnN0LW9mLXR5cGUge1xuICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG59XG5cbi5tYXQtZm9ybS1maWVsZCB7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5hY3Rpb24tbGluayB7XG4gIHBhZGRpbmctcmlnaHQ6IDEwcHg7XG4gIHBhZGRpbmctbGVmdDogMTBweDtcbiAgdGV4dC1hbGlnbjogZW5kO1xufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/esport/edit-teams/edit-teams.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/esport/edit-teams/edit-teams.component.ts ***!
+  \***********************************************************/
+/*! exports provided: EditTeamsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditTeamsComponent", function() { return EditTeamsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm2015/table.js");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/esm2015/paginator.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/esm2015/sort.js");
+/* harmony import */ var _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @service-work/is-loading */ "./node_modules/@service-work/is-loading/fesm2015/service-work-is-loading.js");
+/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared */ "./src/app/shared/index.ts");
+
+
+
+
+
+
+
+let EditTeamsComponent = class EditTeamsComponent {
+    constructor(esportService, authService, isLoadingService) {
+        this.esportService = esportService;
+        this.authService = authService;
+        this.isLoadingService = isLoadingService;
+        this.isVerified = true;
+        this.allTeams = [];
+        this.singleTeam = {};
+        this.DATA_SOURCE = [];
+        this.displayedColumns = ['isVerified', 'name', 'address', 'score', 'logo', 'action'];
+    }
+    ngOnInit() {
+        // GET all teams onInit
+        this.authService.loadToken();
+        this.esportService.getTeams().subscribe(res => {
+            this.allTeams = res['teams'];
+            this.DATA_SOURCE = new _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.allTeams);
+            this.DATA_SOURCE.paginator = this.paginator;
+            this.DATA_SOURCE.sort = this.sort;
+        });
+        // apply loader OnInit service
+        this.isLoadingService.add(this.esportService.getTeams());
+    }
+    // Filtering on (keyup)
+    applyFilter(filterValue) {
+        this.DATA_SOURCE.filter = filterValue.trim().toLowerCase();
+    }
+    onToggle(i, event) {
+        let team = {
+            _id: this.allTeams[i]._id,
+            isVerified: this.allTeams[i].isVerified
+        };
+        this.esportService.verifyTeam(team).subscribe((event) => {
+            team.isVerified = this.allTeams[i].isVerified = !this.allTeams[i].isVerified;
+        });
+        console.log(team.isVerified);
+    }
+};
+EditTeamsComponent.ctorParameters = () => [
+    { type: _shared__WEBPACK_IMPORTED_MODULE_6__["EsportService"] },
+    { type: _shared__WEBPACK_IMPORTED_MODULE_6__["AuthService"] },
+    { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__["IsLoadingService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_3__["MatPaginator"], { static: true })
+], EditTeamsComponent.prototype, "paginator", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_4__["MatSort"], { static: true })
+], EditTeamsComponent.prototype, "sort", void 0);
+EditTeamsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-edit-teams',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./edit-teams.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/esport/edit-teams/edit-teams.component.html")).default,
+        animations: [_shared__WEBPACK_IMPORTED_MODULE_6__["elementAnimations"]],
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./edit-teams.component.scss */ "./src/app/esport/edit-teams/edit-teams.component.scss")).default]
+    })
+], EditTeamsComponent);
 
 
 
@@ -656,14 +802,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let FetchTeamsComponent = class FetchTeamsComponent {
-    constructor(esportService, isLoadingService) {
+    constructor(esportService, authService, isLoadingService) {
         this.esportService = esportService;
+        this.authService = authService;
         this.isLoadingService = isLoadingService;
         this.DATA_SOURCE = [];
-        this.displayedColumns = ['name', 'address', 'logo'];
+        this.displayedColumns = ['isVerified', 'name', 'address', 'logo'];
     }
     ngOnInit() {
         // GET all teams onInit
+        this.authService.loadToken();
         this.esportService.getTeams().subscribe(res => {
             let teamsList = res['teams'];
             this.DATA_SOURCE = new _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](teamsList);
@@ -680,6 +828,7 @@ let FetchTeamsComponent = class FetchTeamsComponent {
 };
 FetchTeamsComponent.ctorParameters = () => [
     { type: _shared__WEBPACK_IMPORTED_MODULE_6__["EsportService"] },
+    { type: _shared__WEBPACK_IMPORTED_MODULE_6__["AuthService"] },
     { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__["IsLoadingService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -705,7 +854,7 @@ FetchTeamsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!*********************************!*\
   !*** ./src/app/esport/index.ts ***!
   \*********************************/
-/*! exports provided: AddTeamComponent, FetchTeamsComponent, MatchesComponent */
+/*! exports provided: AddTeamComponent, FetchTeamsComponent, EditTeamsComponent, ProfileComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -717,8 +866,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fetch_teams_fetch_teams_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fetch-teams/fetch-teams.component */ "./src/app/esport/fetch-teams/fetch-teams.component.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FetchTeamsComponent", function() { return _fetch_teams_fetch_teams_component__WEBPACK_IMPORTED_MODULE_2__["FetchTeamsComponent"]; });
 
-/* harmony import */ var _matches_matches_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./matches/matches.component */ "./src/app/esport/matches/matches.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MatchesComponent", function() { return _matches_matches_component__WEBPACK_IMPORTED_MODULE_3__["MatchesComponent"]; });
+/* harmony import */ var _edit_teams_edit_teams_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit-teams/edit-teams.component */ "./src/app/esport/edit-teams/edit-teams.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EditTeamsComponent", function() { return _edit_teams_edit_teams_component__WEBPACK_IMPORTED_MODULE_3__["EditTeamsComponent"]; });
+
+/* harmony import */ var _profile_profile_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./profile/profile.component */ "./src/app/esport/profile/profile.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ProfileComponent", function() { return _profile_profile_component__WEBPACK_IMPORTED_MODULE_4__["ProfileComponent"]; });
+
 
 
 
@@ -728,93 +881,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/esport/matches/matches.component.scss":
+/***/ "./src/app/esport/profile/profile.component.scss":
 /*!*******************************************************!*\
-  !*** ./src/app/esport/matches/matches.component.scss ***!
+  !*** ./src/app/esport/profile/profile.component.scss ***!
   \*******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("table {\n  width: 100%;\n}\n\n.mat-form-field {\n  font-size: 14px;\n  width: 100%;\n}\n\n.action-link {\n  padding-right: 10px;\n  padding-left: 10px;\n  text-align: end;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2plcmFwYWFhaC9Db2Rlcy9fU0FNUExFUy90ZWFtbW9kaWZpZXIvY2xpZW50L3NyYy9hcHAvZXNwb3J0L21hdGNoZXMvbWF0Y2hlcy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvZXNwb3J0L21hdGNoZXMvbWF0Y2hlcy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQUE7QUNDRjs7QURFQTtFQUNFLGVBQUE7RUFDQSxXQUFBO0FDQ0Y7O0FEQ0E7RUFDRSxtQkFBQTtFQUNBLGtCQUFBO0VBQ0EsZUFBQTtBQ0VGIiwiZmlsZSI6InNyYy9hcHAvZXNwb3J0L21hdGNoZXMvbWF0Y2hlcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbInRhYmxlIHtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5tYXQtZm9ybS1maWVsZCB7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgd2lkdGg6IDEwMCU7XG59XG4uYWN0aW9uLWxpbmsge1xuICBwYWRkaW5nLXJpZ2h0OiAxMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG4gIHRleHQtYWxpZ246ZW5kO1xufSIsInRhYmxlIHtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5tYXQtZm9ybS1maWVsZCB7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5hY3Rpb24tbGluayB7XG4gIHBhZGRpbmctcmlnaHQ6IDEwcHg7XG4gIHBhZGRpbmctbGVmdDogMTBweDtcbiAgdGV4dC1hbGlnbjogZW5kO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("mat-icon {\n  font-size: 200px;\n  height: auto;\n  width: auto;\n}\n\nmat-card-header mat-card-title {\n  font-size: 27px;\n}\n\nmat-card-content {\n  text-transform: uppercase;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2plcmFwYWFhaC9Db2Rlcy9fU0FNUExFUy90ZWFtbW9kaWZpZXIvY2xpZW50L3NyYy9hcHAvZXNwb3J0L3Byb2ZpbGUvcHJvZmlsZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvZXNwb3J0L3Byb2ZpbGUvcHJvZmlsZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNHLGdCQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7QUNDSDs7QURFRztFQUNHLGVBQUE7QUNDTjs7QURFQTtFQUNHLHlCQUFBO0FDQ0giLCJmaWxlIjoic3JjL2FwcC9lc3BvcnQvcHJvZmlsZS9wcm9maWxlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWljb24ge1xuICAgZm9udC1zaXplOiAyMDBweDtcbiAgIGhlaWdodDogYXV0bztcbiAgIHdpZHRoOiBhdXRvO1xufVxubWF0LWNhcmQtaGVhZGVyIHtcbiAgIG1hdC1jYXJkLXRpdGxlIHtcbiAgICAgIGZvbnQtc2l6ZTogMjdweDtcbiAgIH1cbn1cbm1hdC1jYXJkLWNvbnRlbnQge1xuICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbn0iLCJtYXQtaWNvbiB7XG4gIGZvbnQtc2l6ZTogMjAwcHg7XG4gIGhlaWdodDogYXV0bztcbiAgd2lkdGg6IGF1dG87XG59XG5cbm1hdC1jYXJkLWhlYWRlciBtYXQtY2FyZC10aXRsZSB7XG4gIGZvbnQtc2l6ZTogMjdweDtcbn1cblxubWF0LWNhcmQtY29udGVudCB7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59Il19 */");
 
 /***/ }),
 
-/***/ "./src/app/esport/matches/matches.component.ts":
+/***/ "./src/app/esport/profile/profile.component.ts":
 /*!*****************************************************!*\
-  !*** ./src/app/esport/matches/matches.component.ts ***!
+  !*** ./src/app/esport/profile/profile.component.ts ***!
   \*****************************************************/
-/*! exports provided: MatchesComponent */
+/*! exports provided: ProfileComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchesComponent", function() { return MatchesComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfileComponent", function() { return ProfileComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm2015/table.js");
-/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/esm2015/paginator.js");
-/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/esm2015/sort.js");
-/* harmony import */ var _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @service-work/is-loading */ "./node_modules/@service-work/is-loading/fesm2015/service-work-is-loading.js");
-/* harmony import */ var _shared_esport_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/esport.service */ "./src/app/shared/esport.service.ts");
 
 
-
-
-
-
-
-let MatchesComponent = class MatchesComponent {
-    constructor(esportService, isLoadingService) {
-        this.esportService = esportService;
-        this.isLoadingService = isLoadingService;
-        this.DATA_SOURCE = [];
-        this.displayedColumns = ['logo', 'name', 'address', 'score', 'action'];
-    }
+let ProfileComponent = class ProfileComponent {
+    constructor() { }
     ngOnInit() {
-        // GET all teams onInit
-        this.esportService.getTeams().subscribe(res => {
-            let Teams = res['teams'].map(team => {
-                return {
-                    name: team.name,
-                    address: team.address,
-                    score: team.score,
-                    logo: team.logo
-                };
-            });
-            this.DATA_SOURCE = new _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](Teams);
-            this.DATA_SOURCE.sort = this.sort;
-            this.DATA_SOURCE.paginator = this.paginator;
-        });
-        this.isLoadingService.add(this.esportService.getTeams());
-    }
-    // Filtering on (keyup)
-    applyFilter(filterValue) {
-        this.DATA_SOURCE.filter = filterValue.trim().toLowerCase();
-    }
-    // Edit score
-    editScore(team) {
-        console.log('TODO function');
     }
 };
-MatchesComponent.ctorParameters = () => [
-    { type: _shared_esport_service__WEBPACK_IMPORTED_MODULE_6__["EsportService"] },
-    { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__["IsLoadingService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_3__["MatPaginator"], { static: true })
-], MatchesComponent.prototype, "paginator", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_4__["MatSort"], { static: true })
-], MatchesComponent.prototype, "sort", void 0);
-MatchesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+ProfileComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-matches',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./matches.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/esport/matches/matches.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./matches.component.scss */ "./src/app/esport/matches/matches.component.scss")).default]
+        selector: 'app-profile',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./profile.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/esport/profile/profile.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./profile.component.scss */ "./src/app/esport/profile/profile.component.scss")).default]
     })
-], MatchesComponent);
+], ProfileComponent);
 
 
 
@@ -845,31 +950,52 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutComponent", function() { return LayoutComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm2015/layout.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm2015/layout.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared */ "./src/app/shared/index.ts");
+/* harmony import */ var _service_work_is_loading__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @service-work/is-loading */ "./node_modules/@service-work/is-loading/fesm2015/service-work-is-loading.js");
+
+
+
 
 
 
 
 let LayoutComponent = class LayoutComponent {
-    constructor(breakpointObserver) {
+    constructor(breakpointObserver, authService, router, isLoadingService, notification) {
         this.breakpointObserver = breakpointObserver;
+        this.authService = authService;
+        this.router = router;
+        this.isLoadingService = isLoadingService;
+        this.notification = notification;
         this.isHandset$ = this.breakpointObserver
-            .observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["Breakpoints"].Handset)
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(result => result.matches));
+            .observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__["Breakpoints"].Handset)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(result => result.matches));
         this.year = new Date().getFullYear();
-        this.navLinks = [
-            { link: '/registration', label: 'Pendaftaran', icon: 'save' },
-            { link: '/all-teams', label: 'Semua tim', icon: 'timelapse' }
-        ];
+        this.isAuthenticated$ = this.authService.loggedIn();
+    }
+    onLogoutClick() {
+        this.isLoadingService.add();
+        setTimeout(() => {
+            this.authService.logoutUser();
+            this.router.navigate(['/auth/sign-in']);
+            this.notification.success('You are now logged out');
+            this.isLoadingService.remove();
+            return false;
+        }, 1000);
     }
 };
 LayoutComponent.ctorParameters = () => [
-    { type: _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"] }
+    { type: _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__["BreakpointObserver"] },
+    { type: _shared__WEBPACK_IMPORTED_MODULE_5__["AuthService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_6__["IsLoadingService"] },
+    { type: _shared__WEBPACK_IMPORTED_MODULE_5__["NotificationsService"] }
 ];
 LayoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-layout',
+        selector: "app-layout",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./layout.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/layout/layout.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./layout.component.scss */ "./src/app/layout/layout.component.scss")).default]
     })
@@ -894,18 +1020,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _shared_material_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/material.module */ "./src/app/shared/material.module.ts");
-/* harmony import */ var _layout_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./layout.component */ "./src/app/layout/layout.component.ts");
+/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared */ "./src/app/shared/index.ts");
+/* harmony import */ var _layout_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./layout.component */ "./src/app/layout/layout.component.ts");
 
 
 
 
 
 
-// import { FooterComponent } from './main-nav/components/footer/footer.component';
-// import { TopbarComponent } from './main-nav/components/topbar/topbar.component';
-// import { MenuListComponent } from './main-nav/components/menu-list/menu-list.component';
+
 const LAYOUTS_COMPONENTS = [
-    _layout_component__WEBPACK_IMPORTED_MODULE_5__["LayoutComponent"],
+    _layout_component__WEBPACK_IMPORTED_MODULE_6__["LayoutComponent"],
 ];
 let LayoutModule = class LayoutModule {
 };
@@ -914,6 +1039,7 @@ LayoutModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _shared_material_module__WEBPACK_IMPORTED_MODULE_4__["MaterialModule"]],
         declarations: [...LAYOUTS_COMPONENTS],
         exports: [...LAYOUTS_COMPONENTS],
+        providers: [_shared__WEBPACK_IMPORTED_MODULE_5__["AuthService"]]
     })
 ], LayoutModule);
 
@@ -1006,54 +1132,60 @@ const elementAnimations = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1_
 
 /***/ }),
 
-/***/ "./src/app/shared/esport.service.ts":
-/*!******************************************!*\
-  !*** ./src/app/shared/esport.service.ts ***!
-  \******************************************/
-/*! exports provided: EsportService */
+/***/ "./src/app/shared/guards/auth.guard.ts":
+/*!*********************************************!*\
+  !*** ./src/app/shared/guards/auth.guard.ts ***!
+  \*********************************************/
+/*! exports provided: AuthGuard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EsportService", function() { return EsportService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _service_work_is_loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @service-work/is-loading */ "./node_modules/@service-work/is-loading/fesm2015/service-work-is-loading.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ */ "./src/app/shared/index.ts");
 
 
 
-let EsportService = class EsportService {
-    // baseURL: string = 'http://localhost:8080/teams';
-    // headers = new HttpHeaders().set("Content-Type", "application/json");
-    constructor(HTTP) {
-        this.HTTP = HTTP;
-        this.baseURL = 'https://tmf-esport.herokuapp.com/teams';
+
+
+let AuthGuard = class AuthGuard {
+    constructor(router, authService, isLoadingService, notification) {
+        this.router = router;
+        this.authService = authService;
+        this.isLoadingService = isLoadingService;
+        this.notification = notification;
     }
-    // GET ALL TEAMS
-    getTeams() {
-        return this.HTTP.get(this.baseURL);
-    }
-    // POST Team
-    addTeam(name, contact, address, logoTeam) {
-        var formData = new FormData();
-        formData.append("name", name);
-        formData.append("contact", contact);
-        formData.append("address", address);
-        formData.append("logo", logoTeam);
-        return this.HTTP.post(`${this.baseURL}/register`, formData, {
-            reportProgress: true,
-            observe: "events"
-        });
+    canActivate(route, state) {
+        this.isLoadingService.add();
+        if (this.authService.loggedIn()) {
+            setTimeout(() => {
+                this.isLoadingService.remove();
+            }, 1000);
+            return true;
+        }
+        else {
+            setTimeout(() => {
+                this.isLoadingService.remove();
+                this.notification.error('SILAHKAN LOGIN DULU.');
+                this.router.navigate(["/auth/sign-in"]);
+            }, 1000);
+            return false;
+        }
     }
 };
-EsportService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+AuthGuard.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: ___WEBPACK_IMPORTED_MODULE_4__["AuthService"] },
+    { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_3__["IsLoadingService"] },
+    { type: ___WEBPACK_IMPORTED_MODULE_4__["NotificationsService"] }
 ];
-EsportService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
-    })
-], EsportService);
+AuthGuard = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+], AuthGuard);
 
 
 
@@ -1063,20 +1195,28 @@ EsportService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!*********************************!*\
   !*** ./src/app/shared/index.ts ***!
   \*********************************/
-/*! exports provided: EsportService, NotificationsService, elementAnimations */
+/*! exports provided: MaterialModule, AuthService, EsportService, NotificationsService, elementAnimations */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _esport_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./esport.service */ "./src/app/shared/esport.service.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EsportService", function() { return _esport_service__WEBPACK_IMPORTED_MODULE_1__["EsportService"]; });
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/shared/services/auth.service.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return _services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]; });
 
-/* harmony import */ var _notifications_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./notifications.service */ "./src/app/shared/notifications.service.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NotificationsService", function() { return _notifications_service__WEBPACK_IMPORTED_MODULE_2__["NotificationsService"]; });
+/* harmony import */ var _services_esport_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/esport.service */ "./src/app/shared/services/esport.service.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "EsportService", function() { return _services_esport_service__WEBPACK_IMPORTED_MODULE_2__["EsportService"]; });
 
-/* harmony import */ var _animations_element_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animations/element.animations */ "./src/app/shared/animations/element.animations.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "elementAnimations", function() { return _animations_element_animations__WEBPACK_IMPORTED_MODULE_3__["elementAnimations"]; });
+/* harmony import */ var _services_notifications_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/notifications.service */ "./src/app/shared/services/notifications.service.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NotificationsService", function() { return _services_notifications_service__WEBPACK_IMPORTED_MODULE_3__["NotificationsService"]; });
+
+/* harmony import */ var _animations_element_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./animations/element.animations */ "./src/app/shared/animations/element.animations.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "elementAnimations", function() { return _animations_element_animations__WEBPACK_IMPORTED_MODULE_4__["elementAnimations"]; });
+
+/* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./material.module */ "./src/app/shared/material.module.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MaterialModule", function() { return _material_module__WEBPACK_IMPORTED_MODULE_5__["MaterialModule"]; });
+
+
 
 
 
@@ -1172,10 +1312,179 @@ MaterialModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/shared/notifications.service.ts":
+/***/ "./src/app/shared/services/auth.service.ts":
 /*!*************************************************!*\
-  !*** ./src/app/shared/notifications.service.ts ***!
+  !*** ./src/app/shared/services/auth.service.ts ***!
   \*************************************************/
+/*! exports provided: AuthService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+let AuthService = class AuthService {
+    constructor(HTTP) {
+        this.HTTP = HTTP;
+        this.baseURL = 'https://tmf-esport.herokuapp.com/users';
+    }
+    loadToken() {
+        this.authToken = localStorage.getItem('token');
+    }
+    storeUserData(token, user) {
+        localStorage.setItem('token', token);
+        localStorage.setItem('user', JSON.stringify(user));
+        this.authToken = token;
+        this.user = user;
+    }
+    // REGISTER newUser
+    registerUser(name, username, email, password, userAvatar) {
+        let formData = new FormData();
+        formData.append("name", name);
+        formData.append("username", username);
+        formData.append("email", email);
+        formData.append("password", password);
+        formData.append("avatar", userAvatar);
+        return this.HTTP.post(`${this.baseURL}/register`, formData, {
+            reportProgress: true,
+            observe: "events"
+        });
+    }
+    loginUser(user) {
+        let headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]();
+        headers.append('Content-Type', 'application/json');
+        return this.HTTP.post(`${this.baseURL}/login`, { headers: headers });
+    }
+    // LOGIN user
+    authenticateUser(user) {
+        let headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]();
+        headers.append('Content-Type', 'application/json');
+        return this.HTTP.post(this.baseURL + '/login', user, { headers: headers })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(res => {
+            console.log(user.username + ' logged in.');
+        }));
+    }
+    // LOGGEDIN status
+    loggedIn() {
+        return localStorage.getItem('token') !== null;
+    }
+    // LOGOUT
+    logoutUser() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+    }
+    // ERROR handling
+    errorMgmt(error) {
+        let errorMessage = "";
+        if (error.error instanceof ErrorEvent) {
+            errorMessage = error.error.message; // Get client-side error
+        }
+        else {
+            errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`; // Get server-side error
+        }
+        console.log(errorMessage);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])(errorMessage);
+    }
+};
+AuthService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
+];
+AuthService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], AuthService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/services/esport.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/shared/services/esport.service.ts ***!
+  \***************************************************/
+/*! exports provided: EsportService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EsportService", function() { return EsportService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./auth.service */ "./src/app/shared/services/auth.service.ts");
+
+
+
+
+
+let EsportService = class EsportService {
+    constructor(HTTP, authService) {
+        this.HTTP = HTTP;
+        this.authService = authService;
+        this.baseURL = 'https://tmf-esport.herokuapp.com/teams';
+    }
+    createAuthenticationHeaders() {
+        this.authService.loadToken();
+        this.authToken = this.authService.authToken;
+        // Headers configuration options
+        this.options = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]({
+            'Content-Type': 'application/json',
+            'authorization': this.authToken
+        });
+    }
+    // GET ALL TEAMS
+    getTeams() {
+        return this.HTTP.get(this.baseURL);
+    }
+    // POST Team
+    addTeam(name, contact, address, logoTeam) {
+        var formData = new FormData();
+        formData.append("name", name);
+        formData.append("contact", contact);
+        formData.append("address", address);
+        formData.append("logo", logoTeam);
+        return this.HTTP.post(`${this.baseURL}/register`, formData, {
+            reportProgress: true,
+            observe: "events"
+        });
+    }
+    // PUT to verify team
+    verifyTeam(team) {
+        this.createAuthenticationHeaders();
+        // console.log(this.authToken, team);
+        return this.HTTP.put(this.baseURL + '/verifyTeam', team, { headers: this.options })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(res => { console.log(res); }));
+    }
+};
+EsportService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+    { type: _auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"] }
+];
+EsportService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], EsportService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/services/notifications.service.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/shared/services/notifications.service.ts ***!
+  \**********************************************************/
 /*! exports provided: NotificationsService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
