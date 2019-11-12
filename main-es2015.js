@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Search field -->\n<mat-form-field appearance=\"outline\">\n    <mat-label>Pencarian</mat-label>\n    <input\n      matInput\n      (keyup)=\"applyFilter($event.target.value)\"\n      placeholder=\"Cari...\"\n    />\n    <mat-icon matSuffix>search</mat-icon>\n  </mat-form-field>\n  \n  <!-- TABLE OF TEAMS -->\n  <table mat-table [dataSource]=\"DATA_SOURCE\" matSort class=\"mat-elevation-z1\">\n  \n    <!-- isVerified field -->\n    <ng-container matColumnDef=\"isVerified\">\n      <th mat-header-cell *matHeaderCellDef>Status</th>\n      <td mat-cell *matCellDef=\"let team\">\n        <mat-icon *ngIf=\"team.isVerified === true\" style=\"color: green;\">verified_user</mat-icon>\n        <mat-icon *ngIf=\"team.isVerified === false\" style=\"color: red;\">clear</mat-icon>\n      </td>\n    </ng-container>\n  \n    <!-- Team's name field -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell mat-sort-header *matHeaderCellDef>Team's name</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.name }}</td>\n    </ng-container>\n  \n    <!-- Address field -->\n    <ng-container matColumnDef=\"address\">\n      <th mat-header-cell *matHeaderCellDef>Address</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.address }}</td>\n    </ng-container>\n\n    <!-- Score field -->\n    <ng-container matColumnDef=\"score\">\n      <th mat-header-cell mat-sort-header *matHeaderCellDef>Score</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.score }}</td>\n    </ng-container>\n  \n    <!-- Logo field -->\n    <ng-container matColumnDef=\"logo\">\n      <th mat-header-cell *matHeaderCellDef class=\"table-image\">Logo</th>\n      <td mat-cell *matCellDef=\"let team\">\n        <img [src]='team.logo' [alt]='team.name' style=\"max-width: 30px;\" />\n      </td>\n    </ng-container>\n\n    <!-- Action Column -->\n    <ng-container matColumnDef=\"action\">\n      <th mat-header-cell *matHeaderCellDef class=\"action-link\"><mat-icon>edit</mat-icon></th>\n      <td mat-cell *matCellDef=\"let team; let i=index\" class=\"action-link\">\n        <!-- <a mat-icon-button (click)=\"editScore(team)\"><mat-icon>edit</mat-icon></a> -->\n        <mat-slide-toggle\n          [checked]=\"isVerified === true && team.isVerified === true\"\n          (change)=\"onToggle(i, $event)\"\n        ></mat-slide-toggle>\n      </td>\n    </ng-container>\n  \n    <!-- displayedColumns -->\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row [@rowsAnimation]=\"\" *matRowDef=\"let row; columns: displayedColumns\"></tr>\n  </table>\n  \n  <mat-paginator [pageSizeOptions]=\"[5, 10, 20, 50]\" showFirstLastButtons></mat-paginator>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Search field -->\n<mat-form-field appearance=\"outline\">\n    <mat-label>Pencarian</mat-label>\n    <input\n      matInput\n      (keyup)=\"applyFilter($event.target.value)\"\n      placeholder=\"Cari...\"\n    />\n    <mat-icon matSuffix>search</mat-icon>\n  </mat-form-field>\n  \n  <!-- TABLE OF TEAMS -->\n  <table mat-table [dataSource]=\"DATA_SOURCE\" matSort class=\"mat-elevation-z1\">\n  \n    <!-- isVerified field -->\n    <ng-container matColumnDef=\"isVerified\">\n      <th mat-header-cell *matHeaderCellDef>Status</th>\n      <td mat-cell *matCellDef=\"let team\">\n        <mat-icon *ngIf=\"team.isVerified === true\" style=\"color: green;\">verified_user</mat-icon>\n        <mat-icon *ngIf=\"team.isVerified === false\" style=\"color: red;\">clear</mat-icon>\n      </td>\n    </ng-container>\n  \n    <!-- Team's name field -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell mat-sort-header *matHeaderCellDef>Team's name</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.name }}</td>\n    </ng-container>\n  \n    <!-- Address field -->\n    <ng-container matColumnDef=\"address\">\n      <th mat-header-cell *matHeaderCellDef>Address</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.address }}</td>\n    </ng-container>\n\n    <!-- Score field -->\n    <ng-container matColumnDef=\"score\">\n      <th mat-header-cell mat-sort-header *matHeaderCellDef>Score</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.score }}</td>\n    </ng-container>\n  \n    <!-- Logo field -->\n    <ng-container matColumnDef=\"logo\">\n      <th mat-header-cell *matHeaderCellDef class=\"table-image\">Logo</th>\n      <td mat-cell *matCellDef=\"let team\">\n        <img [src]='team.logo' [alt]='team.name' style=\"max-width: 30px;\" />\n      </td>\n    </ng-container>\n\n    <!-- Action Column -->\n    <ng-container matColumnDef=\"action\">\n      <th mat-header-cell *matHeaderCellDef class=\"action-link\"><mat-icon>edit</mat-icon></th>\n      <td mat-cell *matCellDef=\"let team; let i = index;\" class=\"action-link\">\n        <!-- <a mat-icon-button (click)=\"editScore(team)\"><mat-icon>edit</mat-icon></a> -->\n        <mat-slide-toggle\n          [checked]=\"team.isVerified === true\"\n          (change)=\"onToggle(i, $event)\"\n        >{{ i }}</mat-slide-toggle>\n      </td>\n    </ng-container>\n  \n    <!-- displayedColumns -->\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row [@rowsAnimation]=\"\" *matRowDef=\"let row; columns: displayedColumns\"></tr>\n  </table>\n  \n  <mat-paginator [pageSizeOptions]=\"[5, 10, 20, 50]\" showFirstLastButtons></mat-paginator>\n");
 
 /***/ }),
 
@@ -709,7 +709,6 @@ let EditTeamsComponent = class EditTeamsComponent {
         this.isLoadingService = isLoadingService;
         this.isVerified = true;
         this.allTeams = [];
-        this.singleTeam = {};
         this.DATA_SOURCE = [];
         this.displayedColumns = ['isVerified', 'name', 'address', 'score', 'logo', 'action'];
     }
@@ -730,14 +729,17 @@ let EditTeamsComponent = class EditTeamsComponent {
         this.DATA_SOURCE.filter = filterValue.trim().toLowerCase();
     }
     onToggle(i, event) {
-        let team = {
-            _id: this.allTeams[i]._id,
-            isVerified: this.allTeams[i].isVerified
+        // console.log(this.DATA_SOURCE.filteredData[i].isVerified);
+        this.team = {
+            _id: this.DATA_SOURCE.filteredData[i]._id,
+            name: this.DATA_SOURCE.filteredData[i].name,
+            isVerified: this.DATA_SOURCE.filteredData[i].isVerified
         };
-        this.esportService.verifyTeam(team).subscribe((event) => {
-            team.isVerified = this.allTeams[i].isVerified = !this.allTeams[i].isVerified;
+        // console.log(team);
+        this.esportService.verifyTeam(this.team).subscribe((data) => {
+            this.team.isVerified = (this.DATA_SOURCE.filteredData[i].isVerified = !this.DATA_SOURCE.filteredData[i].isVerified);
         });
-        console.log(team.isVerified);
+        console.log(this.team);
     }
 };
 EditTeamsComponent.ctorParameters = () => [
@@ -1420,10 +1422,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EsportService", function() { return EsportService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./auth.service */ "./src/app/shared/services/auth.service.ts");
-
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth.service */ "./src/app/shared/services/auth.service.ts");
 
 
 
@@ -1438,7 +1438,7 @@ let EsportService = class EsportService {
         this.authService.loadToken();
         this.authToken = this.authService.authToken;
         // Headers configuration options
-        this.options = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]({
+        this.options = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
             'Content-Type': 'application/json',
             'authorization': this.authToken
         });
@@ -1463,13 +1463,13 @@ let EsportService = class EsportService {
     verifyTeam(team) {
         this.createAuthenticationHeaders();
         // console.log(this.authToken, team);
-        return this.HTTP.put(this.baseURL + '/verifyTeam', team, { headers: this.options })
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(res => { console.log(res); }));
+        return this.HTTP.put(this.baseURL + '/verifyTeam', team, { headers: this.options });
+        // .pipe(tap(res => {console.log(res)}));
     }
 };
 EsportService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
-    { type: _auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+    { type: _auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] }
 ];
 EsportService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
