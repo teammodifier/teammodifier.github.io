@@ -1144,7 +1144,7 @@
         /*!*********************************!*\
           !*** ./src/app/shared/index.ts ***!
           \*********************************/
-        /*! exports provided: MaterialModule, AuthService, EsportService, NotificationsService, elementAnimations */
+        /*! exports provided: AuthService, EsportService, NotificationsService, elementAnimations, MaterialModule */
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);

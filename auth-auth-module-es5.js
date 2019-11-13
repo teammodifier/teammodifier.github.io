@@ -190,7 +190,7 @@
                                 }
                                 else if (event.body.success === true) {
                                     _this.notification.success(event.body.message);
-                                    _this.router.navigate(["auth/register"]);
+                                    _this.router.navigate(["esport/all-teams"]);
                                     _this.isLoadingService.remove();
                                 }
                         }
