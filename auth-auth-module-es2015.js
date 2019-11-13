@@ -221,7 +221,7 @@ let RegisterComponent = class RegisterComponent {
                     }
                     else if (event.body.success === true) {
                         this.notification.success(event.body.message);
-                        this.router.navigate(["esport/all-teams"]);
+                        this.router.navigate(["auth/sign-in"]);
                         this.isLoadingService.remove();
                     }
             }
