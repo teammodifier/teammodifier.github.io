@@ -699,11 +699,11 @@
             /* harmony import */ var _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @service-work/is-loading */ "./node_modules/@service-work/is-loading/fesm2015/service-work-is-loading.js");
             /* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared */ "./src/app/shared/index.ts");
             var EditTeamsComponent = /** @class */ (function () {
-                function EditTeamsComponent(esportService, authService, isLoadingService) {
+                function EditTeamsComponent(esportService, authService, isLoadingService, notification) {
                     this.esportService = esportService;
                     this.authService = authService;
                     this.isLoadingService = isLoadingService;
-                    this.isVerified = true;
+                    this.notification = notification;
                     this.allTeams = [];
                     this.DATA_SOURCE = [];
                     this.displayedColumns = ['isVerified', 'name', 'address', 'score', 'logo', 'action'];
@@ -727,24 +727,25 @@
                 };
                 EditTeamsComponent.prototype.onToggle = function (i, event) {
                     var _this = this;
-                    // console.log(this.DATA_SOURCE.filteredData[i].isVerified);
-                    this.team = {
+                    var team = {
                         _id: this.DATA_SOURCE.filteredData[i]._id,
-                        name: this.DATA_SOURCE.filteredData[i].name,
                         isVerified: this.DATA_SOURCE.filteredData[i].isVerified
                     };
-                    // console.log(team);
-                    this.esportService.verifyTeam(this.team).subscribe(function (data) {
-                        _this.team.isVerified = (_this.DATA_SOURCE.filteredData[i].isVerified = !_this.DATA_SOURCE.filteredData[i].isVerified);
+                    team.isVerified = !team.isVerified;
+                    this.esportService.verifyTeam(team).subscribe(function (data) {
+                        console.log(data);
+                        _this.notification.success(data.message);
                     });
-                    console.log(this.team);
+                    this.isLoadingService.add(this.esportService.verifyTeam(team));
+                    this.DATA_SOURCE.filteredData[i].isVerified = !this.DATA_SOURCE.filteredData[i].isVerified;
                 };
                 return EditTeamsComponent;
             }());
             EditTeamsComponent.ctorParameters = function () { return [
                 { type: _shared__WEBPACK_IMPORTED_MODULE_6__["EsportService"] },
                 { type: _shared__WEBPACK_IMPORTED_MODULE_6__["AuthService"] },
-                { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__["IsLoadingService"] }
+                { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__["IsLoadingService"] },
+                { type: _shared__WEBPACK_IMPORTED_MODULE_6__["NotificationsService"] }
             ]; };
             tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_3__["MatPaginator"], { static: true })
@@ -752,6 +753,9 @@
             tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_4__["MatSort"], { static: true })
             ], EditTeamsComponent.prototype, "sort", void 0);
+            tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+            ], EditTeamsComponent.prototype, "checked", void 0);
             EditTeamsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-edit-teams',
@@ -1360,7 +1364,6 @@
                     this.createAuthenticationHeaders();
                     // console.log(this.authToken, team);
                     return this.HTTP.put(this.baseURL + '/verifyTeam', team, { headers: this.options });
-                    // .pipe(tap(res => {console.log(res)}));
                 };
                 return EsportService;
             }());

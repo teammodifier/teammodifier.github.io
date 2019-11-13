@@ -703,11 +703,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let EditTeamsComponent = class EditTeamsComponent {
-    constructor(esportService, authService, isLoadingService) {
+    constructor(esportService, authService, isLoadingService, notification) {
         this.esportService = esportService;
         this.authService = authService;
         this.isLoadingService = isLoadingService;
-        this.isVerified = true;
+        this.notification = notification;
         this.allTeams = [];
         this.DATA_SOURCE = [];
         this.displayedColumns = ['isVerified', 'name', 'address', 'score', 'logo', 'action'];
@@ -729,23 +729,24 @@ let EditTeamsComponent = class EditTeamsComponent {
         this.DATA_SOURCE.filter = filterValue.trim().toLowerCase();
     }
     onToggle(i, event) {
-        // console.log(this.DATA_SOURCE.filteredData[i].isVerified);
-        this.team = {
+        let team = {
             _id: this.DATA_SOURCE.filteredData[i]._id,
-            name: this.DATA_SOURCE.filteredData[i].name,
             isVerified: this.DATA_SOURCE.filteredData[i].isVerified
         };
-        // console.log(team);
-        this.esportService.verifyTeam(this.team).subscribe((data) => {
-            this.team.isVerified = (this.DATA_SOURCE.filteredData[i].isVerified = !this.DATA_SOURCE.filteredData[i].isVerified);
+        team.isVerified = !team.isVerified;
+        this.esportService.verifyTeam(team).subscribe((data) => {
+            console.log(data);
+            this.notification.success(data.message);
         });
-        console.log(this.team);
+        this.isLoadingService.add(this.esportService.verifyTeam(team));
+        this.DATA_SOURCE.filteredData[i].isVerified = !this.DATA_SOURCE.filteredData[i].isVerified;
     }
 };
 EditTeamsComponent.ctorParameters = () => [
     { type: _shared__WEBPACK_IMPORTED_MODULE_6__["EsportService"] },
     { type: _shared__WEBPACK_IMPORTED_MODULE_6__["AuthService"] },
-    { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__["IsLoadingService"] }
+    { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__["IsLoadingService"] },
+    { type: _shared__WEBPACK_IMPORTED_MODULE_6__["NotificationsService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_3__["MatPaginator"], { static: true })
@@ -753,6 +754,9 @@ tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_sort__WEBPACK_IMPORTED_MODULE_4__["MatSort"], { static: true })
 ], EditTeamsComponent.prototype, "sort", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], EditTeamsComponent.prototype, "checked", void 0);
 EditTeamsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-edit-teams',
@@ -1464,7 +1468,6 @@ let EsportService = class EsportService {
         this.createAuthenticationHeaders();
         // console.log(this.authToken, team);
         return this.HTTP.put(this.baseURL + '/verifyTeam', team, { headers: this.options });
-        // .pipe(tap(res => {console.log(res)}));
     }
 };
 EsportService.ctorParameters = () => [
