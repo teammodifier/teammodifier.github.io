@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Search field -->\n<mat-form-field appearance=\"outline\">\n    <mat-label>Pencarian</mat-label>\n    <input\n      matInput\n      (keyup)=\"applyFilter($event.target.value)\"\n      placeholder=\"Cari...\"\n    />\n    <mat-icon matSuffix>search</mat-icon>\n  </mat-form-field>\n  \n  <!-- TABLE OF TEAMS -->\n  <table mat-table [dataSource]=\"DATA_SOURCE\" matSort class=\"mat-elevation-z1\">\n  \n    <!-- isVerified field -->\n    <ng-container matColumnDef=\"isVerified\">\n      <th mat-header-cell *matHeaderCellDef>Status</th>\n      <td mat-cell *matCellDef=\"let team\">\n        <mat-icon *ngIf=\"team.isVerified === true\" style=\"color: green;\">verified_user</mat-icon>\n        <mat-icon *ngIf=\"team.isVerified === false\" style=\"color: red;\">clear</mat-icon>\n      </td>\n    </ng-container>\n  \n    <!-- Team's name field -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell mat-sort-header *matHeaderCellDef>Team's name</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.name }}</td>\n    </ng-container>\n  \n    <!-- Address field -->\n    <ng-container matColumnDef=\"address\">\n      <th mat-header-cell *matHeaderCellDef>Address</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.address }}</td>\n    </ng-container>\n\n    <!-- Score field -->\n    <ng-container matColumnDef=\"score\">\n      <th mat-header-cell mat-sort-header *matHeaderCellDef>Score</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.score }}</td>\n    </ng-container>\n  \n    <!-- Logo field -->\n    <ng-container matColumnDef=\"logo\">\n      <th mat-header-cell *matHeaderCellDef class=\"table-image\">Logo</th>\n      <td mat-cell *matCellDef=\"let team\">\n        <img [src]='team.logo' [alt]='team.name' style=\"max-width: 30px;\" />\n      </td>\n    </ng-container>\n\n    <!-- Action Column -->\n    <ng-container matColumnDef=\"action\">\n      <th mat-header-cell *matHeaderCellDef class=\"action-link\"><mat-icon>edit</mat-icon></th>\n      <td mat-cell *matCellDef=\"let team; let i = index;\" class=\"action-link\">\n        <!-- <a mat-icon-button (click)=\"editScore(team)\"><mat-icon>edit</mat-icon></a> -->\n        <mat-slide-toggle\n          [checked]=\"team.isVerified === true\"\n          (change)=\"onToggle(i, $event)\"\n        ></mat-slide-toggle>\n      </td>\n    </ng-container>\n  \n    <!-- displayedColumns -->\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row [@rowsAnimation]=\"\" *matRowDef=\"let row; columns: displayedColumns\"></tr>\n  </table>\n  \n  <mat-paginator [pageSizeOptions]=\"[5, 10, 20, 50]\" showFirstLastButtons></mat-paginator>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Search field -->\n<mat-form-field appearance=\"outline\">\n    <mat-label>Pencarian</mat-label>\n    <input\n      matInput\n      (keyup)=\"applyFilter($event.target.value)\"\n      placeholder=\"Cari...\"\n    />\n    <mat-icon matSuffix>search</mat-icon>\n  </mat-form-field>\n  \n  <!-- TABLE OF TEAMS -->\n  <table mat-table [dataSource]=\"DATA_SOURCE\" matSort class=\"mat-elevation-z1\">\n  \n    <!-- isVerified field -->\n    <ng-container matColumnDef=\"isVerified\">\n      <th mat-header-cell *matHeaderCellDef>Status</th>\n      <td mat-cell *matCellDef=\"let team\">\n        <mat-icon *ngIf=\"team.isVerified === true\" style=\"color: green;\">verified_user</mat-icon>\n        <mat-icon *ngIf=\"team.isVerified === false\" style=\"color: red;\">clear</mat-icon>\n      </td>\n    </ng-container>\n  \n    <!-- Team's name field -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell mat-sort-header *matHeaderCellDef>Team's name</th>\n      <td mat-cell *matCellDef=\"let team\">{{ team.name }}</td>\n    </ng-container>\n  \n    <!-- Team's contact field -->\n    <ng-container matColumnDef=\"contact\">\n      <th mat-header-cell mat-sort-header *matHeaderCellDef [hidden]=\"isHandset$ | async\">Team's contact</th>\n      <td mat-cell *matCellDef=\"let team\" [hidden]=\"isHandset$ | async\">{{ team.contact }}</td>\n    </ng-container>\n  \n    <!-- Address field -->\n    <ng-container matColumnDef=\"address\">\n      <th mat-header-cell *matHeaderCellDef [hidden]=\"isHandset$ | async\">Address</th>\n      <td mat-cell *matCellDef=\"let team\" [hidden]=\"isHandset$ | async\">{{ team.address }}</td>\n    </ng-container>\n\n    <!-- Score field -->\n    <ng-container matColumnDef=\"score\">\n      <th mat-header-cell mat-sort-header *matHeaderCellDef [hidden]=\"isHandset$ | async\">Score</th>\n      <td mat-cell *matCellDef=\"let team\" [hidden]=\"isHandset$ | async\">{{ team.score }}</td>\n    </ng-container>\n  \n    <!-- Logo field -->\n    <ng-container matColumnDef=\"logo\">\n      <th mat-header-cell *matHeaderCellDef class=\"table-image\">Logo</th>\n      <td mat-cell *matCellDef=\"let team\">\n        <img [src]='team.logo' [alt]='team.name' style=\"max-width: 30px;\" />\n      </td>\n    </ng-container>\n\n    <!-- Action Column -->\n    <ng-container matColumnDef=\"action\">\n      <th mat-header-cell *matHeaderCellDef class=\"action-link\"><mat-icon>edit</mat-icon></th>\n      <td mat-cell *matCellDef=\"let team; let i = index;\" class=\"action-link\">\n        <!-- <a mat-icon-button (click)=\"editScore(team)\"><mat-icon>edit</mat-icon></a> -->\n        <mat-slide-toggle\n          [checked]=\"team.isVerified === true\"\n          (change)=\"onToggle(i, $event)\"\n        ></mat-slide-toggle>\n      </td>\n    </ng-container>\n  \n    <!-- displayedColumns -->\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row [@rowsAnimation]=\"\" *matRowDef=\"let row; columns: displayedColumns\"></tr>\n  </table>\n  \n  <mat-paginator [pageSizeOptions]=\"[5, 10, 20, 50]\" showFirstLastButtons></mat-paginator>\n");
 
 /***/ }),
 
@@ -693,8 +693,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm2015/table.js");
 /* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/esm2015/paginator.js");
 /* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/esm2015/sort.js");
-/* harmony import */ var _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @service-work/is-loading */ "./node_modules/@service-work/is-loading/fesm2015/service-work-is-loading.js");
-/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared */ "./src/app/shared/index.ts");
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm2015/layout.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _service_work_is_loading__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @service-work/is-loading */ "./node_modules/@service-work/is-loading/fesm2015/service-work-is-loading.js");
+/* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../shared */ "./src/app/shared/index.ts");
+
+
 
 
 
@@ -703,14 +707,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let EditTeamsComponent = class EditTeamsComponent {
-    constructor(esportService, authService, isLoadingService, notification) {
+    constructor(breakpointObserver, esportService, authService, isLoadingService, notification) {
+        this.breakpointObserver = breakpointObserver;
         this.esportService = esportService;
         this.authService = authService;
         this.isLoadingService = isLoadingService;
         this.notification = notification;
+        this.isHandset$ = this.breakpointObserver
+            .observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_5__["Breakpoints"].Handset)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(result => result.matches));
         this.allTeams = [];
         this.DATA_SOURCE = [];
-        this.displayedColumns = ['isVerified', 'name', 'address', 'score', 'logo', 'action'];
+        this.displayedColumns = ['isVerified', 'name', 'contact', 'address', 'score', 'logo', 'action'];
     }
     ngOnInit() {
         // GET all teams onInit
@@ -743,10 +751,11 @@ let EditTeamsComponent = class EditTeamsComponent {
     }
 };
 EditTeamsComponent.ctorParameters = () => [
-    { type: _shared__WEBPACK_IMPORTED_MODULE_6__["EsportService"] },
-    { type: _shared__WEBPACK_IMPORTED_MODULE_6__["AuthService"] },
-    { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_5__["IsLoadingService"] },
-    { type: _shared__WEBPACK_IMPORTED_MODULE_6__["NotificationsService"] }
+    { type: _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_5__["BreakpointObserver"] },
+    { type: _shared__WEBPACK_IMPORTED_MODULE_8__["EsportService"] },
+    { type: _shared__WEBPACK_IMPORTED_MODULE_8__["AuthService"] },
+    { type: _service_work_is_loading__WEBPACK_IMPORTED_MODULE_7__["IsLoadingService"] },
+    { type: _shared__WEBPACK_IMPORTED_MODULE_8__["NotificationsService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material_paginator__WEBPACK_IMPORTED_MODULE_3__["MatPaginator"], { static: true })
@@ -761,7 +770,7 @@ EditTeamsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-edit-teams',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./edit-teams.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/esport/edit-teams/edit-teams.component.html")).default,
-        animations: [_shared__WEBPACK_IMPORTED_MODULE_6__["elementAnimations"]],
+        animations: [_shared__WEBPACK_IMPORTED_MODULE_8__["elementAnimations"]],
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./edit-teams.component.scss */ "./src/app/esport/edit-teams/edit-teams.component.scss")).default]
     })
 ], EditTeamsComponent);
